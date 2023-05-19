@@ -187,7 +187,7 @@ function zen_image_OLD($src, $title = '', $width = '', $height = '', $parameters
 function zen_image($src, $title = '', $width = '', $height = '', $parameters = '')
 {
     global $template_dir, $zco_notifier;
-
+    $src = preg_replace("|images/(?=https?://)|", '', $src);
     // soft clean the title attribute's value
     $title = zen_clean_html($title);
 
@@ -218,17 +218,17 @@ function zen_image($src, $title = '', $width = '', $height = '', $parameters = '
     }
 
     //image is defined but is missing
-    if (PRODUCTS_IMAGE_NO_IMAGE_STATUS === '1' && !is_file($src)) {
+    if (PRODUCTS_IMAGE_NO_IMAGE_STATUS === '1' && !zen_image_exists($src)) {
         $src = DIR_WS_IMAGES . PRODUCTS_IMAGE_NO_IMAGE;
     }
     
     $zco_notifier->notify('NOTIFY_OPTIMIZE_IMAGE', $template_dir, $src, $title, $width, $height, $parameters);
 
     // Determine if the source-file exists.
-    $file_exists = is_file($src);
+    $file_exists = zen_image_exists($src);
     $image_size = false;
-    if ($file_exists === true) {
-        $image_size = getimagesize($src);
+    if ($file_exists > 0) {
+        $image_size = zen_getimagesize($src);
     }
     if ($image_size === false && IMAGE_REQUIRED === 'false') {
         return false;
@@ -294,6 +294,33 @@ function zen_image($src, $title = '', $width = '', $height = '', $parameters = '
     $image .= '>';
 
     return $image;
+}
+
+/**
+ * 图片状态
+ * @return 2是图片链接，1是图片在本地，0图片不存在 
+ */
+function zen_image_exists($src){
+  if(preg_match("|^https?://|i", $src)){
+    return 2;
+  }elseif(is_file($src)){
+    return 1;
+  }else{
+    return 0;
+  }
+}
+
+/**
+ * 图片尺寸
+ */
+function zen_getimagesize($src){
+  if(preg_match("|^https?://|i", $src)){
+    return array(620, 867);
+  }elseif(is_file($src)){
+    return getimagesize($src);
+  }else{
+    return false;
+  }
 }
 
 /*
