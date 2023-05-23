@@ -376,7 +376,7 @@ class AdminRequestSanitizer extends base
      */
     private function filterFileDirRegex($parameterName)
     {
-        $filedirRegex = '~[^0-9a-z' . preg_quote('.!@#$%&()_-~/`+^ ' . '\\', '~') . ']~i';
+        $filedirRegex = '~[^0-9a-z' . preg_quote('.,!@#$%&()_-~/`+^ ' . '\\', '~') . ']~i';
         if (isset($_POST[$parameterName])) {
             // Add the parameterName to the base arrayname.
             $this->arrayName = $this->setCurrentArrayName($parameterName);
