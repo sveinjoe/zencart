@@ -16,19 +16,20 @@
 
   $_SESSION['navigation']->remove_current_page();
 
-  $products_values_query = "SELECT pd.products_name, p.products_image
-                            FROM " . TABLE_PRODUCTS . " p
-                            left join " . TABLE_PRODUCTS_DESCRIPTION . " pd
-                            on p.products_id = pd.products_id
-                            WHERE p.products_status = 1
-                            and p.products_id = :productsID
-                            and pd.language_id = :languagesID ";
+  // $products_values_query = "SELECT pd.products_name, p.products_image
+  //                           FROM " . TABLE_PRODUCTS . " p
+  //                           left join " . TABLE_PRODUCTS_DESCRIPTION . " pd
+  //                           on p.products_id = pd.products_id
+  //                           WHERE p.products_status = 1
+  //                           and p.products_id = :productsID
+  //                           and pd.language_id = :languagesID ";
 
-  $products_values_query = $db->bindVars($products_values_query, ':productsID', $_GET['pID'], 'integer');
-  $products_values_query = $db->bindVars($products_values_query, ':languagesID', $_SESSION['languages_id'], 'integer');
+  // $products_values_query = $db->bindVars($products_values_query, ':productsID', $_GET['pID'], 'integer');
+  // $products_values_query = $db->bindVars($products_values_query, ':languagesID', $_SESSION['languages_id'], 'integer');
 
-  $products_values = $db->Execute($products_values_query);
-
+  // $products_values = $db->Execute($products_values_query);
+  //edit by sveinjoe<sveinjoe@gmail.com>允许调用远程图片
+  $products_values = sj_get_product_details($_GET['pID']);
   // Ensure data/variable is available for use downstream.
   if ($products_values->EOF) {
     $products_values->fields['products_image'] = '';

@@ -130,6 +130,9 @@ function zen_catalog_base_link($connection = '')
 ////
 // The HTML image wrapper function
   function zen_image($src, $alt = '', $width = '', $height = '', $params = '') {
+    if(preg_match('|^' . DIR_WS_CATALOG_IMAGES . 'https?://|', $src)){
+      $src = preg_replace('|^' . DIR_WS_CATALOG_IMAGES . '|i', '', $src);
+    }
     $image = '<img src="' . $src . '" alt="' . zen_output_string($alt) . '"';
     // soft clean the alt tag
     $alt = zen_clean_html($alt);

@@ -81,8 +81,14 @@ if ($products_image != '' && $flag_show_product_info_additional_images != 0) {
         }
         $dir->close();
     }
+    /**
+     * added by sveinjoe<sveinjoe@gmail.com> 2023-05-23
+     * 检索数据库中的细节图
+     */
+    if(preg_match('|^images/https?://|', $products_image_directory) && !empty($product_info->fields['products_additional_images'])){
+        $images_array = array_merge($images_array, $product_info->fields['products_additional_images']);
+    }
 }
-
 $GLOBALS['zco_notifier']->notify('NOTIFY_MODULES_ADDITIONAL_PRODUCT_IMAGES_LIST', NULL, $images_array);
 
 
@@ -112,10 +118,16 @@ if ($num_images > 0) {
         //
         $GLOBALS['zco_notifier']->notify('NOTIFY_MODULES_ADDITIONAL_IMAGES_GET_LARGE', $products_name, $products_image_large);
 
-        $flag_has_large = file_exists($products_image_large);
-        $products_image_large = ($flag_has_large ? $products_image_large : $products_image_directory . $file);
-        $flag_display_large = (IMAGE_ADDITIONAL_DISPLAY_LINK_EVEN_WHEN_NO_LARGE == 'Yes' || $flag_has_large);
-        $base_image = $products_image_directory . $file;
+        if(preg_match('|^https?://|', $file)){
+            $products_image_large = $file;
+            $flag_display_large = true;
+            $base_image = $file;
+        }else{
+            $flag_has_large = file_exists($products_image_large);
+            $products_image_large = ($flag_has_large ? $products_image_large : $products_image_directory . $file);
+            $flag_display_large = (IMAGE_ADDITIONAL_DISPLAY_LINK_EVEN_WHEN_NO_LARGE == 'Yes' || $flag_has_large);
+            $base_image = $products_image_directory . $file;
+        }
         $thumb_slashes = zen_image(addslashes($base_image), addslashes($products_name), SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT);
 
         // -----
@@ -180,5 +192,4 @@ if ($num_images > 0) {
         }
     } // end for loop
 } // endif
-
 $GLOBALS['zco_notifier']->notify('NOTIFY_MODULES_ADDITIONAL_PRODUCT_IMAGES_END');

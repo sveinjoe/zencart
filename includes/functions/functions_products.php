@@ -33,6 +33,23 @@ function zen_get_product_details($product_id, $language_id = null)
 }
 
 /**
+ * edit by sveinjoe<sveinjoe@gmail.com> 20230523 处理远程调用的细节图
+ */
+function sj_get_product_details($product_id, $language_id = null){
+    $product = zen_get_product_details($product_id, $language_id);
+    //edit by sveinjoe<sveinjoe@gmail.com> 20230523 处理远程调用的细节图
+    if(preg_match('|^https?://|', $product->fields['products_image'])){
+        $arrImages = explode(',', $product->fields['products_image']);
+        if(sizeof($arrImages)>1){
+            $product->fields['products_image'] = $arrImages[0];
+            unset($arrImages[0]);
+            $product->fields['products_additional_images'] = $arrImages;
+        }
+    }
+    return $product;
+}
+
+/**
  * @param int $product_id
  * @param null $product_info
  */
@@ -747,15 +764,18 @@ function zen_get_products_image($product_id, $width = SMALL_IMAGE_WIDTH, $height
 {
     global $db;
 
-    $sql = "SELECT p.products_image
-            FROM " . TABLE_PRODUCTS . " p
-            WHERE products_id=" . (int)$product_id;
-    $result = $db->Execute($sql, 1);
-
+    // $sql = "SELECT p.products_image
+    //         FROM " . TABLE_PRODUCTS . " p
+    //         WHERE products_id=" . (int)$product_id;
+    // $result = $db->Execute($sql, 1);
+    $result = sj_get_product_details($product_id);
     if ($result->EOF) return '';
 
     if (IS_ADMIN_FLAG) {
         return $result->fields['products_image'];
+    }
+    if(preg_match('|^https?://|', $result->fields['products_image'])){
+        return zen_image($result->fields['products_image'], zen_get_products_name($product_id), $width, $height);
     }
     return zen_image(DIR_WS_IMAGES . $result->fields['products_image'], zen_get_products_name($product_id), $width, $height);
 }
