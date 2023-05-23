@@ -133,6 +133,10 @@ function zen_catalog_base_link($connection = '')
     if(preg_match('|^' . DIR_WS_CATALOG_IMAGES . 'https?://|', $src)){
       $src = preg_replace('|^' . DIR_WS_CATALOG_IMAGES . '|i', '', $src);
     }
+    if(preg_match('|,|', $src)){
+      $arrSrc = explode(',', $src);
+      $src = $arrSrc[0];
+    }
     $image = '<img src="' . $src . '" alt="' . zen_output_string($alt) . '"';
     // soft clean the alt tag
     $alt = zen_clean_html($alt);

@@ -376,15 +376,19 @@ class AdminRequestSanitizer extends base
      */
     private function filterFileDirRegex($parameterName)
     {
-        $filedirRegex = '~[^0-9a-z' . preg_quote('.,!@#$%&()_-~/`+^ ' . '\\', '~') . ']~i';
-        if (isset($_POST[$parameterName])) {
-            // Add the parameterName to the base arrayname.
-            $this->arrayName = $this->setCurrentArrayName($parameterName);
-            $this->debugMessages[] = 'PROCESSING FILE_DIR_REGEX == ' . $this->arrayName;
-            $_POST[$parameterName] = preg_replace($filedirRegex, '', $_POST[$parameterName]);
-            $this->postKeysAlreadySanitized[] = $this->arrayName;
+        if($parameterName == 'products_previous_image' && preg_match('|^https?://|', $_POST[$parameterName])){
+            //by sveinjoe<sveinjoe@gmail.com 如果是调用远程图片，那么不进行这一步操作
+            null;
+        }else{
+            $filedirRegex = '~[^0-9a-z' . preg_quote('.,!@#$%&()_-~/`+^ ' . '\\', '~') . ']~i';
+            if (isset($_POST[$parameterName])) {
+                // Add the parameterName to the base arrayname.
+                $this->arrayName = $this->setCurrentArrayName($parameterName);
+                $this->debugMessages[] = 'PROCESSING FILE_DIR_REGEX == ' . $this->arrayName;
+                $_POST[$parameterName] = preg_replace($filedirRegex, '', $_POST[$parameterName]);
+                $this->postKeysAlreadySanitized[] = $this->arrayName;
+            }
         }
-
     }
 
     /**
