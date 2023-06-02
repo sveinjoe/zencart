@@ -28,7 +28,7 @@ foreach ($_GET as $varname => $varvalue) {
     }
 }
 
-$csrfBlackListLocal = [];
+$csrfBlackListLocal = ['product_info'];
 $csrfBlackList = (isset($csrfBlackListCustom)) ? array_merge($csrfBlackListLocal, $csrfBlackListCustom) : $csrfBlackListLocal;
 if (!isset($_SESSION ['securityToken'])) {
     $_SESSION ['securityToken'] = md5(uniqid(rand(), true));
