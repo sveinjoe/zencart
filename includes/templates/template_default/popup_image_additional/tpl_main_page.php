@@ -14,6 +14,8 @@
 // $products_values->fields['products_image']
   if (file_exists($_GET['products_image_large_additional'])) {
     echo '<a href="javascript:window.close()">' . zen_image($_GET['products_image_large_additional'], (isset($products_values->fields['products_name']) ? $products_values->fields['products_name'] . ' ' : '') . TEXT_CLOSE_WINDOW_IMAGE) . '</a>';
+  } elseif (filter_var($_GET['products_image_large_additional_real'], FILTER_VALIDATE_URL)){
+    echo '<a href="javascript:window.close()">' . zen_image($_GET['products_image_large_additional_real'], (isset($products_values->fields['products_name']) ? $products_values->fields['products_name'] . ' ' : '') . TEXT_CLOSE_WINDOW_IMAGE) . '</a>';
   } else {
     echo '<a href="javascript:window.close()">' . zen_image(DIR_WS_IMAGES . $products_image, (isset($products_values->fields['products_name']) ? $products_values->fields['products_name'] . ' ' : '') . TEXT_CLOSE_WINDOW_IMAGE) . '</a>';
   }

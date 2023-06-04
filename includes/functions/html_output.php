@@ -188,6 +188,8 @@ function zen_image($src, $title = '', $width = '', $height = '', $parameters = '
 {
     global $template_dir, $zco_notifier;
     $src = preg_replace("|images/(?=https?://)|", '', $src);
+    $arr = explode(',', $src);
+    $src = $arr[0];
     // soft clean the title attribute's value
     $title = zen_clean_html($title);
 
@@ -315,7 +317,7 @@ function zen_image_exists($src){
  */
 function zen_getimagesize($src){
   if(preg_match("|^https?://|i", $src)){
-    return array(620, 867);
+    return array(0, 0);
   }elseif(is_file($src)){
     return getimagesize($src);
   }else{

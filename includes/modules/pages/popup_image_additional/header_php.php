@@ -9,7 +9,6 @@
  */
 // This should be first line of the script:
   $zco_notifier->notify('NOTIFY_HEADER_START_POPUP_IMAGES_ADDITIONAL');
-
   $_SESSION['navigation']->remove_current_page();
 
   // $products_values_query = "SELECT pd.products_name, p.products_image
@@ -35,7 +34,10 @@
   $products_image_base = preg_replace('|'.$products_image_extension.'$|', '', $products_image);
   $products_image_medium = $products_image_base . IMAGE_SUFFIX_MEDIUM . $products_image_extension;
   $products_image_large = $products_image_base . IMAGE_SUFFIX_LARGE . $products_image_extension;
-
+  $products_image_large_additional_real = base64_decode($_GET['products_image_large_additional']);
+  if(filter_var($products_image_large_additional_real, FILTER_VALIDATE_URL)){
+    $_GET['products_image_large_additional_real'] = $products_image_large_additional_real;
+  }
   $_GET['products_image_large_additional'] = str_replace(' ', '+', stripslashes($_REQUEST['products_image_large_additional']));
 
   $basepath = "";

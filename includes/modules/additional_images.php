@@ -128,7 +128,10 @@ if ($num_images > 0) {
             $flag_display_large = (IMAGE_ADDITIONAL_DISPLAY_LINK_EVEN_WHEN_NO_LARGE == 'Yes' || $flag_has_large);
             $base_image = $products_image_directory . $file;
         }
-        $thumb_slashes = zen_image(addslashes($base_image), addslashes($products_name), SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT);
+        $thumb_slashes = zen_image(addslashes($base_image), addslashes($products_name), ceil(MEDIUM_IMAGE_WIDTH/2), ceil(MEDIUM_IMAGE_HEIGHT/2));
+        if(filter_var($products_image_large, FILTER_VALIDATE_URL)){
+            $products_image_large = base64_encode($products_image_large);
+        }
 
         // -----
         // This notifier lets any image-handler "massage" the name of the current thumbnail image name (with appropriate
@@ -139,7 +142,7 @@ if ($num_images > 0) {
         //
         $GLOBALS['zco_notifier']->notify('NOTIFY_MODULES_ADDITIONAL_IMAGES_THUMB_SLASHES', array(), $thumb_slashes);
 
-        $thumb_regular = zen_image($base_image, $products_name, SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT);
+        $thumb_regular = zen_image($base_image, $products_name, ceil(MEDIUM_IMAGE_WIDTH/2), ceil(MEDIUM_IMAGE_HEIGHT/2));
         $large_link = zen_href_link(FILENAME_POPUP_IMAGE_ADDITIONAL, 'pID=' . $_GET['products_id'] . '&pic=' . $i . '&products_image_large_additional=' . $products_image_large);
 
         // Link Preparation:
