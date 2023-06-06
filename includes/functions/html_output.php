@@ -282,6 +282,12 @@ function zen_image($src, $title = '', $width = '', $height = '', $parameters = '
         }
     } elseif (strpos($src, 'http') !== 0) {
         $image .= ' width="' . (int)SMALL_IMAGE_WIDTH . '" height="' . (int)SMALL_IMAGE_HEIGHT . '"';
+    } elseif (preg_match('|^https?://|', $src)) {
+        if($width == '' && $height == ''){
+          $image .= ' width="" height=""';
+        }else{
+          $image .= ' width="' . (int)SMALL_IMAGE_WIDTH . '" height="' . (int)SMALL_IMAGE_HEIGHT . '"';
+        }
     }
 
     // inject rollover class if one is defined. NOTE: This could end up with 2 "class" elements if $parameters contains "class" already.

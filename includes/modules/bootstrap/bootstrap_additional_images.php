@@ -43,10 +43,16 @@ if ($products_image !== '' && $flag_show_product_info_additional_images !== '0')
     foreach (glob($products_image_directory . $products_image_base . '*.' . $products_image_extension) as $file) {
         $images_array[] = $file;
     }
+    /**
+     * added by sveinjoe<sveinjoe@gmail.com> 2023-05-23
+     * 检索数据库中的细节图
+     */
+    if(preg_match('|^images/https?://|', $products_image_directory) && !empty($product_info->fields['products_additional_images'])){
+        $images_array = array_merge($images_array, $product_info->fields['products_additional_images']);
+    }
 }
 
 $zco_notifier->notify('NOTIFY_MODULES_ADDITIONAL_PRODUCT_IMAGES_LIST', NULL, $images_array);
-
 // Build output based on images found
 $num_images = count($images_array);
 $list_box_contents = [];

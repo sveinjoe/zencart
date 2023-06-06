@@ -99,6 +99,7 @@ if (file_exists('includes/local/configure.php')) {
  * boolean if true the autoloader scripts will be parsed and their output shown. For debugging purposes only.
  */
 define('DEBUG_AUTOLOAD', false);
+// define('STRICT_ERROR_REPORTING', true);
 /**
  * set the level of error reporting
  *
