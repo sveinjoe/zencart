@@ -101,9 +101,18 @@ require DIR_WS_MODULES . zen_get_module_sidebox_directory('search_header.php');
 $sales_text_class = (HEADER_SALES_TEXT !== '') ? 'col-sm-4' : 'col-sm-12';
 ?>
             <div class="<?php echo $sales_text_class; ?>">
+<?php 
+$logosrc = $template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE;
+if(file_exists($logosrc)){
+?>
                 <a href="<?php echo zen_href_link(FILENAME_DEFAULT); ?>" aria-label="<?php echo TEXT_HEADER_ARIA_LABEL_LOGO; ?>">
                     <?php echo zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base, 'images') . '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT, HEADER_LOGO_WIDTH, HEADER_LOGO_HEIGHT); ?>
                 </a><br>
+<?php
+}else{
+  echo sjLogoText();
+}
+?>
             </div>
 <?php
 if ((SHOW_BANNERS_GROUP_SET2 !== '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SET2)) || HEADER_SALES_TEXT !== '') {
