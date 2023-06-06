@@ -130,7 +130,9 @@ if ($num_images > 0) {
         }
         $thumb_slashes = zen_image(addslashes($base_image), addslashes($products_name), SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT);
         if(filter_var($products_image_large, FILTER_VALIDATE_URL)){
-            $products_image_large = base64_encode($products_image_large);
+            $products_image_large_64 = base64_encode($products_image_large);
+        }else{
+            $products_image_large_64 = $products_image_large;
         }
 
         // -----
@@ -143,7 +145,7 @@ if ($num_images > 0) {
         $GLOBALS['zco_notifier']->notify('NOTIFY_MODULES_ADDITIONAL_IMAGES_THUMB_SLASHES', array(), $thumb_slashes);
 
         $thumb_regular = zen_image($base_image, $products_name, SMALL_IMAGE_WIDTH, MEDIUM_IMAGE_HEIGHT);
-        $large_link = zen_href_link(FILENAME_POPUP_IMAGE_ADDITIONAL, 'pID=' . $_GET['products_id'] . '&pic=' . $i . '&products_image_large_additional=' . $products_image_large);
+        $large_link = zen_href_link(FILENAME_POPUP_IMAGE_ADDITIONAL, 'pID=' . $_GET['products_id'] . '&pic=' . $i . '&products_image_large_additional=' . $products_image_large_64);
 
         // Link Preparation:
         // -----
