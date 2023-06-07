@@ -45,7 +45,7 @@ foreach($arrSportTeams as $sportName => $arrNFLTeams){
                   <h6 class="dropdown-header">'. $divName .'</h6>';
                   foreach($arrDivision as $arrTeam){
                     echo '
-                    <a class="dropdown-item" href="' . $arrTeam['roster'] . '">' . zen_image($arrTeam['logo'], $arrTeam['name'], '40', '40') . $arrTeam['name'] . '</a>
+                    <a class="dropdown-item" href="/index.php?main_page=search&search_categories=1&keyword=' . urlencode($arrTeam['name']) . '&sort=20a">' . zen_image($arrTeam['logo'], $arrTeam['name'], '40', '40') . $arrTeam['name'] . '</a>
                     ';
                   }
                 echo '
