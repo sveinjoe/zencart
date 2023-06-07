@@ -24,7 +24,7 @@ if (!(isset($_POST['import']) && $_POST['import'] != '')) {
   $time_start = microtime(true); // benchmarking
   $display_output .= EASYPOPULATE_4_DISPLAY_HEADING;
 
-  $file = array('name' => $_POST['import']);
+  $file = array('name' => urldecode($_POST['import']));
   $display_output .= sprintf(EASYPOPULATE_4_DISPLAY_LOCAL_FILE_SPEC, $file['name']);
 
   $ep_update_count = 0; // product records updated

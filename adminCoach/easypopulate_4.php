@@ -604,8 +604,8 @@ if (isset($_FILES['uploadfile'])) {
 
 // Handle file deletion (delete only in the current directory for security reasons)
 if ((!isset($error) || !$error) && (isset($_POST["delete"])) && !is_null($_SERVER["SCRIPT_FILENAME"]) && $_POST["delete"] != basename($_SERVER["SCRIPT_FILENAME"])) {
-  if (preg_match("/(\.(sql|gz|csv|txt|log))$/i", $_POST["delete"]) && @unlink($upload_dir . basename($_POST["delete"]))) {
-    // $messageStack->add(sprintf($_POST["delete"]." was deleted successfully"), 'success');
+  if (preg_match("/(\.(sql|gz|csv|txt|log))$/i", $_POST["delete"]) && @unlink($upload_dir . urldecode(basename($_POST["delete"])))) {
+    $messageStack->add(sprintf($_POST["delete"]." was deleted successfully"), 'success');
     zen_redirect(zen_href_link(FILENAME_EASYPOPULATE_4));
   } else {
     $messageStack->add(sprintf("Cannot delete file: " . $_POST["delete"]), 'caution');

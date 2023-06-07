@@ -6,7 +6,7 @@ if (!defined('IS_ADMIN_FLAG')) {
 }
 
 if ( isset($_POST['split']) ) {
-  $file_name = $_POST['split'];
+  $file_name = urldecode($_POST['split']);
 } else {
   die("invalid program entry");
 }
