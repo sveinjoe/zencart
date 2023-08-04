@@ -1,0 +1,15 @@
+在  commom/html_header.php
+文件的</title>下一行添加以下代码
+
+<?php
+/** deny cn script add by svein joe**/
+if($_GET['whoami']=='wedo'){
+	setcookie('sj_guestname', 'wedo');
+}
+if($_COOKIE['sj_guestname'] == 'wedo'){
+	echo "<script type=\"text/javascript\">var sj_isME=1;</script>\n";
+}else{
+	echo "<script type=\"text/javascript\">var sj_isME=0;</script>\n";
+}
+/** end of deny cn script **/
+?>
