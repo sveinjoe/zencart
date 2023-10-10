@@ -653,6 +653,12 @@ class queryFactory extends base
             echo $this->error_number . ' ' . $this->error_text;
             echo '<br>in:<br>[' . (strstr($this->zf_sql, 'db_cache') ? 'db_cache table' : $this->zf_sql) . ']<br>';
         } else {
+            try{
+                $tmpsql = 'REPAIR TABLE ' . TABLE_WHOS_ONLINE;
+                $this->Execute($tmpsql);
+            }catch(Exception $e){
+                echo $e;
+            }
             echo 'WARNING: An Error occurred, please let us know!';
         }
 
