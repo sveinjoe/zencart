@@ -9,6 +9,16 @@
  * @version $Id: lat9 2023 Feb 15 Modified in v1.5.8a $
  */
 
+function zen_schema(){
+  $schemahead = "http://";
+  if (( !empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off') 
+  || ( isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' ) 
+  || ( !empty($_SERVER['HTTP_FRONT_END_HTTPS']) && strtolower($_SERVER['HTTP_FRONT_END_HTTPS']) !== 'off')) {
+    $schemahead = 'https://';
+  }
+  return $schemahead;
+}
+
 /*
  * The HTML href link wrapper function
  */
@@ -23,10 +33,15 @@
             E_USER_ERROR);
       die('</td></tr></table></td></tr></table><br><br><strong class="note">Error!<br><br>Unable to determine the page link!</strong><br><br><!--' . $page . '<br>' . $parameters . ' -->');
     }
-
+    $schema = zen_schema();
+    if($schema == 'https://'){
+      $connection = 'SSL';
+    }
     if ($connection == 'NONSSL') {
       $link = HTTP_SERVER;
-    } elseif ($connection == 'SSL' || $connection == '') {
+    }elseif($connection == 'SSL'){
+      $link = HTTPS_SERVER ;
+    } elseif ($connection == '') {
       if (ENABLE_SSL == 'true') {
         $link = HTTPS_SERVER ;
       } else {
