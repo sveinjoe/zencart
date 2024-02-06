@@ -196,15 +196,35 @@ function zen_image_OLD($src, $title = '', $width = '', $height = '', $parameters
     return $image;
 }
 
+function GetMainDomain($domain) {
+	$domain = trim(strtolower($domain));
+	$strhead = substr($domain, 0, 4);
+	if($strhead == "www."){
+		$domain = substr($domain, 4);
+	}
+	return trim($domain,".");
+}
+
+function sj_get_real_src($src){
+  $src = preg_replace("|images/(?=https?://)|", '', $src);
+  $arr = explode(',', $src);
+  $src = $arr[0];
+  $arr = parse_url($src);
+  $maindomain = GetMainDomain($_SERVER['HTTP_HOST']);
+  $urlMainDomain = GetMainDomain($arr['host']);
+  if($maindomain == $urlMainDomain && file_exists(DIR_FS_CATALOG . $arr['path'])){
+    $src = ltrim($arr['path'], '/');
+  }
+  return $src;
+}
+
 /*
  * The HTML image wrapper function
  */
 function zen_image($src, $title = '', $width = '', $height = '', $parameters = '')
 {
     global $template_dir, $zco_notifier;
-    $src = preg_replace("|images/(?=https?://)|", '', $src);
-    $arr = explode(',', $src);
-    $src = $arr[0];
+    $src = sj_get_real_src($src);
     // soft clean the title attribute's value
     $title = zen_clean_html($title);
 
@@ -299,7 +319,7 @@ function zen_image($src, $title = '', $width = '', $height = '', $parameters = '
         $image .= ' width="' . (int)SMALL_IMAGE_WIDTH . '" height="' . (int)SMALL_IMAGE_HEIGHT . '"';
     } elseif (preg_match('|^https?://|', $src)) {
         if($width == '' && $height == ''){
-          $image .= ' width="" height=""';
+          $image .= '';
         }else{
           $image .= ' width="' . (int)SMALL_IMAGE_WIDTH . '" height="' . (int)SMALL_IMAGE_HEIGHT . '"';
         }
