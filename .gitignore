@@ -1,4 +1,3 @@
-configure.php
 local/configure*.php
 /vendor
 
