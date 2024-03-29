@@ -96,7 +96,22 @@
     zen_redirect(zen_href_link(FILENAME_STORE_MANAGER));
     break;
 
-    case ('optimize_db_start'):
+    case ('discount_all'):
+      $discount = $_POST['discount'];
+      if (!is_numeric($discount) || $discount <= 0 || $discount > 2) { 
+        break;
+      }
+      $sql = "UPDATE " . TABLE_SPECIALS . " SET specials_new_products_price = (specials_new_products_price * " . $discount . ")";
+      file_put_contents('discount_all.log', $sql);
+      $db->Execute($sql);
+
+      $messageStack->add_session(SUCCESS_DISCOUNT_ALL . $discount, 'success');
+      zen_record_admin_activity('Store Manager executed [discount all], set to ' . $discount, 'info');
+      $action = '';
+      zen_redirect(zen_href_link(FILENAME_STORE_MANAGER));
+      break;
+
+  case ('optimize_db_start'):
       $processing_message = TEXT_INFO_OPTIMIZING_DATABASE_TABLES;
       $processing_action_url = zen_href_link(FILENAME_STORE_MANAGER, 'action=optimize_db_do');
     break;
@@ -235,7 +250,7 @@ if ($processing_message != '') {
 <!-- eof: update all products price sorter -->
 
 <!-- bof: reset all counter to 0 -->
-    <tr>
+<tr>
         <td colspan="2">
             <form name="update_counter" action="<?php echo zen_href_link(FILENAME_STORE_MANAGER, 'action=update_counter', 'NONSSL'); ?>" method="post">
                 <?php echo zen_draw_hidden_field('securityToken', $_SESSION['securityToken']); ?>
@@ -250,6 +265,23 @@ if ($processing_message != '') {
         </td>
     </tr>
     <!-- eof: reset all counter to 0 -->
+
+<!-- bof: discount all product's price -->
+    <tr>
+        <td colspan="2">
+            <form name="discount_all" action="<?php echo zen_href_link(FILENAME_STORE_MANAGER, 'action=discount_all', 'NONSSL'); ?>" method="post">
+                <?php echo zen_draw_hidden_field('securityToken', $_SESSION['securityToken']); ?>
+                <table>
+                    <tr>
+                        <td class="main"><?php echo TEXT_INFO_ALL_PRODUCT_DISCOUNT; ?></td>
+                        <td class="main"><?php echo zen_draw_input_field('discount', '', 'length=3'); ?></td>
+                        <td class="main"><button type="submit" class="btn btn-default btn-sm"><?php echo IMAGE_UPDATE; ?></button></td>
+                    </tr>
+                </table>
+                <?php echo '</form>'; ?>
+        </td>
+    </tr>
+    <!-- eof: discount all product's price -->
 
 <?php /*
 <!-- bof: reset all products_viewed to 0 -->
