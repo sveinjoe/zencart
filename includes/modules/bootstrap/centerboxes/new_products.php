@@ -84,7 +84,7 @@ if ($num_products_count > 0) {
         $zco_notifier->notify('NOTIFY_MODULES_NEW_PRODUCTS_B4_LIST_BOX', [], $new_products->fields, $products_price);
 
         $list_box_contents[$row][$col] = [
-            'params' => ' class="centerBoxContentsNew centerBoxContents card mb-3 p-3 text-center"',
+            'params' => ' class="centerBoxContentsNew centerBoxContents mb-3 p-3 text-center col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2"',
             'text' => $new_products_image . '<a href="' . $new_products_link . '">' . $new_products_name . '</a><br>' . $products_price
         ];
 

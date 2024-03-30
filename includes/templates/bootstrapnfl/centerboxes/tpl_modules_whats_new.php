@@ -23,23 +23,17 @@ if ($zc_show_new_products === true) {
         echo $title;
     }
 ?>
-    <div id="newCenterbox-card-body" class="card-body text-center">
+    <div id="newCenterbox-card-body" class="card-body text-center row">
 <?php
     if (is_array($list_box_contents)) {
         for ($row = 0, $n = count($list_box_contents); $row < $n; $row++) {
             $params = '';
-?>
-        <div class="card-deck text-center">
-<?php
             for ($col = 0, $j = count($list_box_contents[$row]); $col < $j; $col++) {
                 $r_params = $list_box_contents[$row][$col]['params'];
                 if (isset($list_box_contents[$row][$col]['text'])) {
                     echo '<div' . $r_params . '>' . $list_box_contents[$row][$col]['text'] . '</div>';
                 }
             }
-?>
-        </div>
-<?php
         }
     }
  ?>

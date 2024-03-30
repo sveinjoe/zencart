@@ -84,7 +84,7 @@ if ($num_products_count > 0) {
                 '</a><br>';
         }
         $list_box_contents[$row][$col] = [
-            'params' => ' class="centerBoxContentsFeatured centerBoxContents card mb-3 p-3 text-center"',
+            'params' => ' class="centerBoxContentsFeatured centerBoxContents mb-3 p-3 text-center col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2"',
             'text' => $featured_products_image . '<a href="' . $featured_products_link . '">' . $featured_products_name . '</a><br>' . $products_price
         ];
 
