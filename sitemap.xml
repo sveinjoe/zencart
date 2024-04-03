@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/includes/templates/bootstrap/css/gss.xsl"?>
+<sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- generator="Zen-Cart SitemapXML" 4.0.1 -->
+<!-- sitemap.xml created at 2024-04-03 12:46:24 -->
+ <sitemap>
+  <loc>http://www.zencart158a.com/sitemap/sitemapcategories.xml</loc>
+  <lastmod>2024-04-03</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://www.zencart158a.com/sitemap/sitemapmainpage.xml</loc>
+  <lastmod>2024-04-03</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://www.zencart158a.com/sitemap/sitemapmanufacturers.xml</loc>
+  <lastmod>2024-04-03</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://www.zencart158a.com/sitemap/sitemapproducts.xml</loc>
+  <lastmod>2024-04-03</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://www.zencart158a.com/sitemap/sitemapproducts_reviews.xml</loc>
+  <lastmod>2024-04-03</lastmod>
+ </sitemap>
+</sitemapindex>
