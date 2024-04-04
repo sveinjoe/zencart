@@ -183,7 +183,7 @@ if ($num_products_count > 0) {
             // this array is intentionally in reverse order, with largest index first
             $grid_classes_matrix = [
                 '10' => 'row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5',
-                '8' => 'row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4',
+                '8' => 'row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4',
                 '6' => 'row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3',
             ];
             // determine classes to use based on number of grid-columns used by "center" column

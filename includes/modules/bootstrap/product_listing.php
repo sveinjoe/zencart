@@ -197,7 +197,7 @@ if ($num_products_count > 0) {
                     '12' => 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6',
                     '10' => 'row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5',
                     '9' => 'row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5',
-                    '8' => 'row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4',
+                    '8' => 'row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4',
                     '6' => 'row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3',
                 ];
             }
@@ -298,9 +298,9 @@ if ($num_products_count > 0) {
                     if ($product_listing_layout_style !== 'table') {
                         $lc_align = 'center';
                     }
-                    $lc_text = '<h5 class="itemTitle">
+                    $lc_text = '<span class="itemTitle">
                         <a class="" href="' . $href . '">' . $listing_product_name . '</a>
-                        </h5>';
+                        </span>';
 
                     if ((int)PRODUCT_LIST_DESCRIPTION > 0) {
                         $listing_description = zen_trunc_string(zen_clean_html(stripslashes(zen_get_products_description($record['products_id'], $_SESSION['languages_id']))), PRODUCT_LIST_DESCRIPTION);
@@ -328,8 +328,7 @@ if ($num_products_count > 0) {
 
                 case 'PRODUCT_LIST_PRICE':
                     $lc_align = ($product_listing_layout_style === 'table') ? 'right' : 'center';
-
-                    $lc_text = zen_get_products_display_price($record['products_id']);
+                    $lc_text = '<div class="productPriceBlock">' . zen_get_products_display_price($record['products_id']) . '</div>';
                     $lc_text .= zen_get_buy_now_button($record['products_id'], $lc_button, $more_info_button);
                     $lc_text .= zen_get_products_quantity_min_units_display($record['products_id']);
                     if (zen_get_show_product_switch($record['products_id'], 'ALWAYS_FREE_SHIPPING_IMAGE_SWITCH')) {
@@ -379,16 +378,17 @@ if ($num_products_count > 0) {
             }
         }
 
+        // if ($product_listing_layout_style === 'columns' || $product_listing_layout_style === 'fluid') {
         if ($product_listing_layout_style === 'columns' || $product_listing_layout_style === 'fluid') {
-            $lc_text = implode('<br>', $product_contents);
+            $lc_text = implode('<!--br-->', $product_contents);
             $style = '';
             if ($product_listing_layout_style === 'columns') {
                 $style = ' style="width:' . $col_width . '%;"';
             }
             $list_box_contents[$rows][] = [
-                'params' => 'class="card mb-3 p-3 centerBoxContentsListing text-center h-100 "' . $style,
+                'params' => 'class="card mb-1 p-1 centerBoxContentsListing text-center h-100 "' . $style,
                 'text' => $lc_text,
-                'wrap_with_classes' => 'col mb-4',
+                'wrap_with_classes' => 'p-1 mb-2',
                 'card_type' => $product_listing_layout_style,
                 'category' => $record['master_categories_id'],
                 'parent_category_name' => $record['parent_category_name'],

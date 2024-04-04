@@ -88,15 +88,15 @@ class ZcaBootstrapObserver extends base
                         } else {
                             $show_discount_amount = '';
                         }
-                        $show_sale_discount = '<span class="mx-auto w-100 p-1 productPriceDiscount">' . PRODUCT_PRICE_DISCOUNT_PREFIX . $show_discount_amount . PRODUCT_PRICE_DISCOUNT_PERCENTAGE . '</span>';
+                        $show_sale_discount = '<span class="mx-auto w-100 p-1 productPriceDiscount test91">' . PRODUCT_PRICE_DISCOUNT_PREFIX . $show_discount_amount . PRODUCT_PRICE_DISCOUNT_PERCENTAGE . '</span>';
                     } else {
-                        $show_sale_discount = '<span class="mx-auto w-100 p-1 productPriceDiscount">' . PRODUCT_PRICE_DISCOUNT_PREFIX . $this->displayPrice($this->display_normal_price - $this->display_sale_price) . PRODUCT_PRICE_DISCOUNT_AMOUNT . '</span>';
+                        $show_sale_discount = '<span class="mx-auto w-100 p-1 productPriceDiscount test93">' . PRODUCT_PRICE_DISCOUNT_PREFIX . $this->displayPrice($this->display_normal_price - $this->display_sale_price) . PRODUCT_PRICE_DISCOUNT_AMOUNT . '</span>';
                     }
                 } else {
                     if (SHOW_SALE_DISCOUNT == 1) {
-                        $show_sale_discount = '<span class="mx-auto w-100 p-1 productPriceDiscount">' . PRODUCT_PRICE_DISCOUNT_PREFIX . number_format(100 - (($this->display_special_price / $this->display_normal_price) * 100), SHOW_SALE_DISCOUNT_DECIMALS) . PRODUCT_PRICE_DISCOUNT_PERCENTAGE . '</span>';
+                        $show_sale_discount = '<span class="mx-auto w-100 p-1 productPriceDiscount test97">' . PRODUCT_PRICE_DISCOUNT_PREFIX . number_format(100 - (($this->display_special_price / $this->display_normal_price) * 100), SHOW_SALE_DISCOUNT_DECIMALS) . PRODUCT_PRICE_DISCOUNT_PERCENTAGE . '</span>';
                     } else {
-                        $show_sale_discount = '<span class="mx-auto w-100 p-1 productPriceDiscount">' . PRODUCT_PRICE_DISCOUNT_PREFIX . $this->displayPrice($this->display_normal_price - $this->display_special_price) . PRODUCT_PRICE_DISCOUNT_AMOUNT . '</span>';
+                        $show_sale_discount = '<span class="mx-auto w-100 p-1 productPriceDiscount test99">' . PRODUCT_PRICE_DISCOUNT_PREFIX . $this->displayPrice($this->display_normal_price - $this->display_special_price) . PRODUCT_PRICE_DISCOUNT_AMOUNT . '</span>';
                     }
                 }
                 $p2 = true;
@@ -126,9 +126,9 @@ class ZcaBootstrapObserver extends base
                     }
                 } else {
                     if ($this->product_is_free == '1') {
-                        $show_special_price = '<span class="mx-auto w-100 p-1 productSpecialPrice">' . '<s>' . $this->displayPrice($this->display_special_price) . '</s>' . '</span>';
+                        $show_special_price = '<span class="mx-auto w-100 p-1 productSpecialPrice test129">' . '<s>' . $this->displayPrice($this->display_special_price) . '</s>' . '</span>';
                     } else {
-                        $show_special_price = '<span class="mx-auto w-100 p-1 productSpecialPrice">' . $this->displayPrice($this->display_special_price) . '</span>';
+                        $show_special_price = '<span class="mx-auto w-100 p-1 productSpecialPrice test131">' . $this->displayPrice($this->display_special_price) . '</span>';
                     }
                     $show_sale_price = '';
                 }

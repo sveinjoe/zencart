@@ -16,13 +16,13 @@ require DIR_WS_MODULES . zen_get_module_directory('centerboxes/' . FILENAME_SPEC
 <?php
 if ($zc_show_special_products === true) {
 ?>
-<div id="specialsDefault" class="card mb-3 centerBoxWrapper">
+<div id="specialsDefault" class="mb-3 centerBoxWrapper">
 <?php
     if (!empty($title)) {
         echo $title;
     }
 ?>
-    <div id="specialsCenterbox-card-body" class="card-body text-center row">
+    <div id="specialsCenterbox-card-body" class="text-center row">
 <?php
     if (is_array($list_box_contents)) {
         for ($row = 0, $n = count($list_box_contents); $row < $n; $row++) {

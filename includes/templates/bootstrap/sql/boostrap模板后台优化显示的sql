@@ -1,0 +1,18 @@
+/*在目录页显示产品描述前多少个字*/
+UPDATE `configuration` SET `configuration_value` = '0' WHERE `configuration_key` = 'PRODUCT_LIST_DESCRIPTION';
+/*首页显示多少个特价商品*/
+UPDATE `configuration` SET `configuration_value` = '12' WHERE `configuration_key` = 'MAX_DISPLAY_SPECIAL_PRODUCTS_INDEX';
+/*首页显示多少个推荐商品*/
+UPDATE `configuration` SET `configuration_value` = '12' WHERE `configuration_key` = 'MAX_DISPLAY_SEARCH_RESULTS_FEATURED';
+/*首页显示多少个also purchased商品*/
+UPDATE `configuration` SET `configuration_value` = '6' WHERE `configuration_key` = 'MAX_DISPLAY_ALSO_PURCHASED';
+/*首页显示多少个新商品*/
+UPDATE `configuration` SET `configuration_value` = '12' WHERE `configuration_key` = 'MAX_DISPLAY_NEW_PRODUCTS';
+/**不显示价格优惠百分比*/
+UPDATE `configuration` SET `configuration_value` = '0' WHERE `configuration_key` = 'SHOW_SALE_DISCOUNT_STATUS';
+/**目录页不显示立即购买按钮*/
+UPDATE `configuration` SET `configuration_value` = '0' WHERE `configuration_key` = 'PRODUCT_LIST_PRICE_BUY_NOW';
+/*关闭目录页面里添加多个商品到购物车的功能*/
+UPDATE `configuration` SET `configuration_value` = '0' WHERE `configuration_key` = 'PRODUCT_LISTING_MULTIPLE_ADD_TO_CART';
+/*修正图片中的域名*/
+UPDATE zen_products SET products_image = REPLACE(products_image, 'http://zencart158a.com/', 'https://www.zencart158a.com/') WHERE products_image LIKE '%http://zencart158a.com/%';

@@ -15,13 +15,13 @@
 $zco_notifier->notify('NOTIFY_TPL_COLUMNAR_DISPLAY_START', $current_page_base, $list_box_contents, $title);
 ?>
 
-<div class="card mb-3">
+<div class="mb-3">
 
 <?php if ($title) { ?>
 <?php echo $title; ?>
 <?php } ?>
 
-<div class="card-body text-center">
+<div class="text-center">
 <?php
 if (is_array($list_box_contents)) {
     foreach ($list_box_contents as $row => $cols) {

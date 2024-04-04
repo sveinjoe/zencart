@@ -225,3 +225,4 @@ admin/includes/*.config.save
 
 #release process
 modified_files.txt
+/images/img
