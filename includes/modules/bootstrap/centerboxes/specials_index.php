@@ -90,8 +90,8 @@ if ($num_products_count > 0) {
         }
 
         $list_box_contents[$row][$col] = [
-            'params' => ' class="centerBoxContentsSpecials centerBoxContents mb-3 p-3 text-center col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2"',
-            'text' => $special_products_image . '<a href="' . $special_products_link . '">' . $special_products_name . '</a><br>' . $products_price
+            'params' => ' class="centerBoxContentsSpecials centerBoxContents card mb-1 p-1 text-center"',
+            'text' => $special_products_image . '<span class="itemTitle"><a href="' . $special_products_link . '">' . $special_products_name . '</a></span>' . '<div class="productPriceBlock">' . $products_price . '</div>'
         ];
 
         $col++;

@@ -15,4 +15,4 @@ UPDATE `configuration` SET `configuration_value` = '0' WHERE `configuration_key`
 /*关闭目录页面里添加多个商品到购物车的功能*/
 UPDATE `configuration` SET `configuration_value` = '0' WHERE `configuration_key` = 'PRODUCT_LISTING_MULTIPLE_ADD_TO_CART';
 /*修正图片中的域名*/
-UPDATE zen_products SET products_image = REPLACE(products_image, 'http://zencart158a.com/', 'https://www.zencart158a.com/') WHERE products_image LIKE '%http://zencart158a.com/%';
+UPDATE products SET products_image = REPLACE(products_image, 'http://zencart158a.com/', 'https://www.zencart158a.com/') WHERE products_image LIKE '%http://zencart158a.com/%';

@@ -10,7 +10,7 @@
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
  * @version $Id: tpl_no_notifications.php 2982 2006-02-07 07:56:41Z birdbrain $
  */
-?>
+/*
 <div id="ProductNotifications-centerBoxContents" class="card mb-3 text-center">
     <h3 id="ProductNotifications-centerBoxHeading" class="centerBoxHeading card-header"><?php echo BOX_HEADING_NOTIFICATIONS; ?></h3>
     <div id="ProductNotifications-card-body" class="card-body p-3 text-center">
@@ -21,3 +21,4 @@
         </a>
     </div>
 </div>
+*/

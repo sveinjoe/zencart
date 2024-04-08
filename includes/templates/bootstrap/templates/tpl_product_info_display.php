@@ -61,86 +61,19 @@ require $template->get_template_dir('/tpl_products_next_previous.php', DIR_WS_TE
 <?php
   if (!empty($products_image)) {
   ?>
-<div id="productInfo-productMainImage" class="productMainImage pt-3 text-center">
+    <div id="productInfo-productMainImage" class="productMainImage pt-3 text-center">
 <?php
 /**
  * display the main product image
  */
-   require $template->get_template_dir('/tpl_modules_main_product_image.php', DIR_WS_TEMPLATE, $current_page_base, 'templates') . '/tpl_modules_main_product_image.php'; ?>
-</div>
+  require $template->get_template_dir('/tpl_modules_main_product_image.php', DIR_WS_TEMPLATE, $current_page_base, 'templates') . '/tpl_modules_main_product_image.php'; ?>
+    </div>
 <?php
   }
 ?>
 <!--eof Main Product Image-->
 
-<!--bof Additional Product Images -->
-<div id="productInfo-productAdditionalImages" class="productAdditionalImages text-center">
-<?php
-/**
- * display the products additional images in a model carousel
- */
- 
-if (PRODUCT_INFO_SHOW_BOOTSTRAP_MODAL_POPUPS === 'Yes' && PRODUCT_INFO_SHOW_BOOTSTRAP_MODAL_SLIDE === '1') {
-
-require $template->get_template_dir('tpl_bootstrap_images.php', DIR_WS_TEMPLATE, $current_page_base, 'modalboxes') . '/tpl_bootstrap_images.php';
-
-if ($num_images > 0) {
-$buttonText = $num_images . TEXT_MULTIPLE_IMAGES; ?>
-<div class="p-1"></div>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bootstrap-slide-modal-lg"><?php echo $buttonText; ?></button>
-<div class="p-3"></div>
-<?php
-}
-?>
-
-<?php
-} else {
-
-/**
- * display the products additional images in individual modal
- */
- 
-echo '<div class="p-3"></div>'; 
- 
-  require $template->get_template_dir('/tpl_modules_additional_images.php', DIR_WS_TEMPLATE, $current_page_base, 'templates') . '/tpl_modules_additional_images.php';
-  }
-  ?>
-</div>
-<!--eof Additional Product Images -->
-
-<!--bof Product description -->
-<?php if ($products_description != '') { ?>
-<div id="productInfo-productDescription" class="productDescription mb-3"><?php echo stripslashes($products_description); ?>
-</div>
-<?php } ?>
-<!--eof Product description -->
-
-<!--bof Reviews button and count-->
-<?php
-if ($flag_show_product_info_reviews === '1') {
-    // if more than 0 reviews, then show reviews button; otherwise, show the "write review" button
-    if ($reviews->fields['count'] > 0 ) {
-?>
-    <div id="productInfo-productReviewLink" class="productReviewLink mb-3">
-        <?php echo zca_button_link(zen_href_link(FILENAME_PRODUCT_REVIEWS, zen_get_all_get_params()), BUTTON_REVIEWS_ALT, 'button_reviews'); ?>
-    </div>
-
-    <p id="productInfo-productReviewCount" class="productReviewCount">
-        <?php echo ($flag_show_product_info_reviews_count === '1' ? TEXT_CURRENT_REVIEWS . ' ' . $reviews->fields['count'] : ''); ?>
-    </p>
-
-<?php
-    } else {
-?>
-    <div id="productInfo-productReviewLink" class="productReviewLink mb-3">
-        <?php echo zca_button_link(zen_href_link(FILENAME_PRODUCT_REVIEWS_WRITE, zen_get_all_get_params()), BUTTON_WRITE_REVIEW_ALT, 'button_write_review'); ?>
-    </div>
-<?php
-    }
-}
-?>
-<!--eof Reviews button and count -->
-</div>
+  </div>
   <div id="productInfo-displayColRight"  class="col-sm mb-3">
 
 <!--bof Product details list  -->
@@ -149,6 +82,9 @@ $display_product_model = ($flag_show_product_info_model === '1' && $products_mod
 $display_product_weight = ($flag_show_product_info_weight === '1' && $products_weight != 0);
 $display_product_quantity = ($flag_show_product_info_quantity === '1');
 $display_product_manufacturer = ($flag_show_product_info_manufacturer === '1' && !empty($manufacturers_name));
+/** 暂时不显示这些信息 */
+$display_product_model = false;
+$display_product_quantity = false;
 if ($display_product_model === true || $display_product_weight === true || $display_product_quantity === true || $display_product_manufacturer === true) { ?>
 
 <ul id="productInfo-productDetailsList" class="productDetailsList list-group mb-3">
@@ -163,7 +99,8 @@ if ($display_product_model === true || $display_product_weight === true || $disp
 <!--eof Product details list -->
 
 <?php
-if ($flag_show_ask_a_question) {
+//禁止显示ask a question 20240405 <sveinjoe@gmail.com>
+if ($flag_show_ask_a_question && false) {
 ?>
 <!-- bof Ask a Question -->
 <br>
@@ -184,7 +121,9 @@ $one_time = '';
 ?>
 
 <!--bof Product Price block above Attributes -->
-<?php if (zen_get_products_display_price((int)$_GET['products_id']) > '0') { ?>
+<?php 
+/** 暂时不显示属性上面的价格 */
+if (false && zen_get_products_display_price((int)$_GET['products_id']) > '0') { ?>
 <!--bof products price top card-->
 <div id="productsPriceTop-card" class="card mb-3">
   <div id="productsPriceTop-card-body" class="card-body p-3">
@@ -302,6 +241,112 @@ if (CUSTOMERS_APPROVAL == 3 && TEXT_LOGIN_FOR_PRICE_BUTTON_REPLACE_SHOWROOM == '
 <!--eof Add to Cart Box-->
 
   </div>
+
+<?php /*bof 卡片式内容*/?>
+    <div class="container col-12">
+      <div class="row">
+        <div class="col-12">
+          <?php /*-- 导航标签 --*/ ?>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="home"
+                aria-selected="true"><?=TEXT_PRODUCTS_DESCRIPTION?></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile"
+                aria-selected="false"><?=TEXT_PRODUCTS_REVIEWS?></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="contact"
+                aria-selected="false"><?=TEXT_ADDITIONAL_IMAGES?></a>
+            </li>
+          </ul>
+
+          <?php /*-- 标签对应的内容 --*/ ?>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+<?php 
+      // bof Product description  
+      if ($products_description != '') {
+?>
+    <div id="productInfo-productDescription" class="productDescription mb-3"><?php echo stripslashes($products_description); ?>
+    </div>
+<?php
+      // eof Product description 
+      } 
+?>
+            </div>
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+<?php /*!--bof Reviews button and count--*/?>
+<?php
+if ($flag_show_product_info_reviews === '1') {
+    // if more than 0 reviews, then show reviews button; otherwise, show the "write review" button
+    if ($reviews->fields['count'] > 0 ) {
+?>
+    <div id="productInfo-productReviewLink" class="productReviewLink mb-3">
+        <?php echo zca_button_link(zen_href_link(FILENAME_PRODUCT_REVIEWS, zen_get_all_get_params()), BUTTON_REVIEWS_ALT, 'button_reviews'); ?>
+    </div>
+
+    <p id="productInfo-productReviewCount" class="productReviewCount">
+        <?php echo ($flag_show_product_info_reviews_count === '1' ? TEXT_CURRENT_REVIEWS . ' ' . $reviews->fields['count'] : ''); ?>
+    </p>
+
+<?php
+    } else {
+?>
+    <div id="productInfo-productReviewLink" class="productReviewLink mb-3">
+        <?php echo zca_button_link(zen_href_link(FILENAME_PRODUCT_REVIEWS_WRITE, zen_get_all_get_params()), BUTTON_WRITE_REVIEW_ALT, 'button_write_review'); ?>
+    </div>
+<?php
+    }
+}
+?>
+<?php /*!--eof Reviews button and count --*/?>
+            </div>
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+
+<?php /*--bof Additional Product Images --*/ ?>
+    <div id="productInfo-productAdditionalImages" class="productAdditionalImages text-center">
+    <?php
+    /**
+     * display the products additional images in a model carousel
+     */
+    
+    if (PRODUCT_INFO_SHOW_BOOTSTRAP_MODAL_POPUPS === 'Yes' && PRODUCT_INFO_SHOW_BOOTSTRAP_MODAL_SLIDE === '1') {
+
+    require $template->get_template_dir('tpl_bootstrap_images.php', DIR_WS_TEMPLATE, $current_page_base, 'modalboxes') . '/tpl_bootstrap_images.php';
+
+    if ($num_images > 0) {
+    $buttonText = $num_images . TEXT_MULTIPLE_IMAGES; ?>
+    <div class="p-1"></div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bootstrap-slide-modal-lg"><?php echo $buttonText; ?></button>
+    <div class="p-3"></div>
+    <?php
+    }
+    ?>
+
+    <?php
+    } else {
+
+    /**
+     * display the products additional images in individual modal
+     */
+    
+    echo '<div class="p-3"></div>'; 
+    
+      require $template->get_template_dir('/tpl_modules_additional_images.php', DIR_WS_TEMPLATE, $current_page_base, 'templates') . '/tpl_modules_additional_images.php';
+      }
+      ?>
+    </div>
+<?php /*--eof Additional Product Images --*/ ?>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<?php /*eof 卡片式内容*/?>
+
 </div>
 
 <div id="productInfo-moduledDisplayRow" class="row">

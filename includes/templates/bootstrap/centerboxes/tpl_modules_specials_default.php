@@ -22,16 +22,22 @@ if ($zc_show_special_products === true) {
         echo $title;
     }
 ?>
-    <div id="specialsCenterbox-card-body" class="text-center row">
+    <div id="specialsCenterbox-card-body" class="text-center row row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
 <?php
     if (is_array($list_box_contents)) {
         for ($row = 0, $n = count($list_box_contents); $row < $n; $row++) {
             $params = '';
             for ($col = 0, $j = count($list_box_contents[$row]); $col < $j; $col++) {
+?>
+                <div class="p-1">
+<?php
                 $r_params = $list_box_contents[$row][$col]['params'];
                 if (isset($list_box_contents[$row][$col]['text'])) {
                     echo '<div' . $r_params . '>' . $list_box_contents[$row][$col]['text'] . '</div>';
                 }
+?>
+                </div>
+<?php
             }
         }
     }

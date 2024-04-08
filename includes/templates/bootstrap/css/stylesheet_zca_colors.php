@@ -418,15 +418,3 @@ a.carousel-control-next:hover {
     <?php echo ($zca_primary_address_card_header_color !== '') ? "color: $zca_primary_address_card_header_color;" : ''; ?>
 }
 </style>
-<?php
-if (isset($_GET['main_page']) && $_GET['main_page'] == 'index' && isset($_GET['cPath'])) {
-?>
-<style>
-span.itemTitle {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-</style>
-<?php
-}

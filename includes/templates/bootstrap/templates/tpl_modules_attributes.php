@@ -12,13 +12,16 @@
  * @version $Id: DrByte 2019 Jul 25 Modified in v1.5.7 $
  */
 ?>
-<!--bof attributes card-->
-<div id="attributes-card" class="card mb-3">
-<?php if ($zv_display_select_option > 0) { ?>
+<?php /*!--bof attributes card--*/?>
+
+<?php /*!-- <div id="attributes-card" class="card mb-3"> --*/?>
+<?php 
+/** 暂时不显示这么丑的please choose */
+if (false && $zv_display_select_option > 0) { ?>
 <h2 id="attributes-card-header" class="card-header"><?php echo TEXT_PRODUCT_OPTIONS; ?></h2>
 <?php } // show please select unless all are readonly ?>
 
-<div id="attributes-card-body" class="card-body p-3">
+<?php /*!-- <div id="attributes-card-body" class="card-body"> --*/?>
 <?php
     for($i=0, $j=sizeof($options_name); $i<$j; $i++) {
 ?>
@@ -32,9 +35,9 @@
   }
 ?>
 
-<!--bof attribute options card-->
-<div id="attributeOptions<?php echo $options_html_id[$i]; ?>-card" class="card mb-3 wrapperAttribsOptions">
-<h2 id="attributeOptions<?php echo $options_html_id[$i]; ?>-card-header" class="card-header optionName"><?php echo $options_name[$i]; ?></h2>
+<?php /*!--bof attribute options card--*/?>
+<div id="attributeOptions<?php echo $options_html_id[$i]; ?>-card" class="card mb-2 wrapperAttribsOptions">
+<h5 id="attributeOptions<?php echo $options_html_id[$i]; ?>-card-header" class="card-header optionName"><?php echo $options_name[$i]; ?></h5>
 <div id="attributeOptions<?php echo $options_html_id[$i]; ?>-card-body" class="card-body p-3">
 <?php echo "\n" . $options_menu[$i]; ?>
 
@@ -55,7 +58,7 @@ if (!empty($options_attributes_image[$i])) {
 </div>
 </div>
 </div>
-<!--eof attribute options card-->
+<?php /*!--eof attribute options card--*/?>
 
 <?php
     }
@@ -76,6 +79,6 @@ if (!empty($options_attributes_image[$i])) {
     
 <?php require($template->get_template_dir('tpl_attributes_qty_prices.php',DIR_WS_TEMPLATE, $current_page_base,'modalboxes'). '/tpl_attributes_qty_prices.php'); ?>    
 <?php } ?>
-</div>
-</div>
-<!--eof attributes card-->
+<?php /*!-- </div> --*/?>
+<?php /*!-- </div> --*/?>
+<?php /*!--eof attributes card--*/?>
