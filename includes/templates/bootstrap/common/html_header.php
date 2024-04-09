@@ -25,6 +25,7 @@ header('X-Frame-Options:SAMEORIGIN');
  * load the module for generating page meta-tags
  */
 require DIR_WS_MODULES . zen_get_module_directory('meta_tags.php');
+require DIR_WS_MODULES . zen_get_module_directory('rich_results.php');
 
 // -----
 // Define a set of preloaded css/js files.  Done here in array since it's
@@ -230,6 +231,11 @@ if (!empty($bs4_no_preloading)) {
 
   <?php
   $zco_notifier->notify('NOTIFY_HTML_HEAD_END', $current_page_base);
+  ?>
+  <?php
+  if(isset($rich_result)){
+    echo $rich_result->get_ld_json_script();
+  }
   ?>
   </head>
 
