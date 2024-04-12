@@ -22,9 +22,8 @@ $define = [
 // processing and identifies the address that was overridden by paypalwpp.  The message is both
 // displayed to the customer and recorded as a customer-visible orders-status-history record.
 //
-    'WARNING_PAYPAL_SENDTO_CHANGED' => 'The delivery address that you entered (%s) was replaced by the address you selected at PayPal.  Please review your order and contact us if an update is needed.',
-    'WARNING_PAYPALWPP_TOTAL_CHANGED' => 'Your order\'s total has changed, based on the delivery address you selected at PayPal.  Please review your order and re-submit.',
-
+'WARNING_PAYPAL_SENDTO_CHANGED' => 'L\'adresse de livraison que vous avez entrée (%s) a été remplacée par l\'adresse que vous avez sélectionnée sur PayPal. Veuillez vérifier votre commande et contactez-nous si une mise à jour est nécessaire.',  
+'WARNING_PAYPALWPP_TOTAL_CHANGED' => 'Le total de votre commande a changé, basé sur l\'adresse de livraison que vous avez sélectionnée sur PayPal. Veuillez vérifier votre commande et soumettre à nouveau.',
 // -----
 // This language-constant can be used in the store's update to /includes/modules/[YOUR_TEMPLATE/]information.php
 // to point the customer to the order_status page link.
