@@ -7,8 +7,8 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Salemaker',
-    'SUBHEADING_TITLE' => 'Salemaker Usage Tips:',
+    'HEADING_TITLE' => '促销助手',  
+    'SUBHEADING_TITLE' => '促销助手使用技巧：',
 ];
 
 return $define;

@@ -7,19 +7,19 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Reset Password',
-    'TEXT_ADMIN_EMAIL' => 'Admin Email Address',
-    'TEXT_ADMIN_USERNAME' => 'Admin Username',
-    'TEXT_BUTTON_REQUEST_RESET' => 'Request Reset',
-    'TEXT_BUTTON_LOGIN' => 'Login',
-    'TEXT_BUTTON_CANCEL' => 'Cancel',
-    'ERROR_WRONG_EMAIL' => 'You entered the wrong email address.',
-    'ERROR_WRONG_EMAIL_NULL' => 'Go away gooberbrain :-P',
-    'MESSAGE_PASSWORD_SENT' => 'Thank you. If the email address and username you entered matches an admin account in our database, then a new password will be sent to that email address.<br>Please read that email and then click "login" to use the new temporary password.',
-    'TEXT_EMAIL_SUBJECT_PWD_RESET' => 'Your Requested change',
-    'TEXT_EMAIL_MESSAGE_PWD_RESET' => 'A new password was requested from %s.' . "\n\n" . 'Your new temporary password is:' . "\n\n   %s\n\nYou will be asked to choose a new password before logging in.\n\nThis temporary password expires in 24 hours.\n\n\n",
-    'TEXT_EMAIL_SUBJECT_PWD_FAILED_RESET' => 'Access Alert!',
-    'TEXT_EMAIL_MESSAGE_PWD_FAILED_RESET' => "Failed attempts for admin password resets have been received from %s\n\nInvalid email and/or username supplied.\n\nIf you have admin accounts sharing the same email address you should consider assigning unique email addresses to them, to make resets easier.",
+    'HEADING_TITLE' => '重置密码',  
+    'TEXT_ADMIN_EMAIL' => '管理员电子邮件地址',  
+    'TEXT_ADMIN_USERNAME' => '管理员用户名',  
+    'TEXT_BUTTON_REQUEST_RESET' => '请求重置',  
+    'TEXT_BUTTON_LOGIN' => '登录',  
+    'TEXT_BUTTON_CANCEL' => '取消',  
+    'ERROR_WRONG_EMAIL' => '您输入的电子邮件地址错误。',  
+    'ERROR_WRONG_EMAIL_NULL' => '走开，傻瓜 :-P', // 这句话较为口语化，可能需要根据实际情况进行更恰当的翻译  
+    'MESSAGE_PASSWORD_SENT' => '谢谢。如果您输入的电子邮件地址和用户名与我们在数据库中的管理员账户匹配，那么新密码将会发送到该电子邮件地址。<br>请阅读那封电子邮件，然后点击“登录”使用新的临时密码。',  
+    'TEXT_EMAIL_SUBJECT_PWD_RESET' => '您请求的更改',  
+    'TEXT_EMAIL_MESSAGE_PWD_RESET' => '有人从%s请求了一个新的密码。' . "\n\n" . '您的新临时密码是：' . "\n\n   %s\n\n在登录之前，系统将要求您选择一个新的密码。\n\n这个临时密码在24小时内有效。\n\n\n",  
+    'TEXT_EMAIL_SUBJECT_PWD_FAILED_RESET' => '访问警告!',  
+    'TEXT_EMAIL_MESSAGE_PWD_FAILED_RESET' => "从%s收到了管理员密码重置的失败尝试\n\n提供的电子邮件地址和/或用户名无效。\n\n如果您的管理员账户共享相同的电子邮件地址，您应该考虑为它们分配唯一的电子邮件地址，以便于重置。",
 ];
 
 return $define;

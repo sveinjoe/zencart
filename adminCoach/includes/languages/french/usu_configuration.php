@@ -11,41 +11,40 @@
 // -----
 // These _TITLE/_DESCRIPTION values are recorded in the database for an initial installation of the USU plugin.
 //
-define('USU_ENABLED_TITLE', 'Enable alternate URLs?');
-define('USU_ENABLED_DESCRIPTION', 'This is a global setting that enables (<b>true</b>) or disables (<b>false</b>) the alternate URLs\' generation.');
-
-define('USU_DEBUG_TITLE', 'Enable debug log?');
-define('USU_DEBUG_DESCRIPTION', 'When enabled, additional debugging information is saved to log files (<code>/logs/usu-{adm-}yyyymmmdd-hhmmss.log</code>.<br><br>Enabling debugging may result in the creation of numerous log files and may adversely affect server performance. Only enable this if absolutely necessary!');
-
-define('USU_CPATH_TITLE', 'Generate cPath parameters');
-define('USU_CPATH_DESCRIPTION', 'By default Zen Cart generates a cPath parameter for product pages. These are used to keep linked products in the correct category. In automatic mode the cPath will only be added if needed.');
-
-define('USU_END_TITLE', 'Alternate URLs end with');
-define('USU_END_DESCRIPTION', 'If you want your URLs to end with a certain suffix add one here. Common suffixes are \'.html\', \'.htm\'. Leave this field blank to have no suffix added to generated URLs.');
-
-define('USU_FORMAT_TITLE', 'Format of alternate URLs');
-define('USU_FORMAT_DESCRIPTION', 'You can select from a list of commonly generated formats.<br><br><b>Original:</b><ul><li><i>Categories:</i> category-name-c-34</li><li><i>Products:</i> product-name-p-54</li></ul><b>Category Parent:</b><ul><li><i>Categories:</i> parent-category-name-c-34</li><li><i>Products:</i> parent-product-name-p-54</li></ul>');
-
-define('USU_CATEGORY_DIR_TITLE', 'Display categories as directories');
-define('USU_CATEGORY_DIR_DESCRIPTION', 'You can select from a list of commonly generated formats.<br><b>Off:</b> disables displaying categories as directories<br><br><b>Short:</b> use the settings from \'Format of alternate URLs\'<br><br><b>Full:</b> uses full category paths<br><br>');
-
-define('USU_REMOVE_CHARS_TITLE', 'Remove problematic characters');
-define('USU_REMOVE_CHARS_DESCRIPTION', 'This allows you remove certain problematic characters from the generated URLs.<br><br><i>non-alphanumerical:</i> removes all non-alphanumerical characters<br><i>punctuation:</i> removes all punctuation characters');
-
-define('USU_FILTER_PCRE_TITLE', 'Enter PCRE filter rules');
-define('USU_FILTER_PCRE_DESCRIPTION', 'This setting uses PCRE rules to filter URLs.<br><br>This filter is run before character conversions and stripping of special characters. If you want a dash - in your URLS, use a single space. To escape a character in the regular expression use \\\\ instead of a single \\.<br><br>The format <b>MUST</b> be in the form: <b>find1=>replace1,find2=>replace2</b>. ');
-
-define('USU_FILTER_SHORT_WORDS_TITLE', 'Filter short words');
-define('USU_FILTER_SHORT_WORDS_DESCRIPTION', 'This setting will filter &quot;short&quot; words, i.e. those with length less than or equal to the value specified, from any generated URLs.  Use the value <b>0</b> to include <em>all</em> words.');
-
-define('USU_FILTER_PAGES_TITLE', 'Limit alternate URLS to the following pages');
-define('USU_FILTER_PAGES_DESCRIPTION', 'You can limit the pages which will be rewritten by specifying them here. If no pages are specified all pages will be rewritten.<br><br>The format is a comma-delimited list (intervening spaces are OK) and <b>must</b> be in the form: <b>page1,page2,page3</b> or <b>page1, page2, page3</b>');
-
-define('USU_ENGINE_TITLE', 'Choose URL Engine');
-define('USU_ENGINE_DESCRIPTION', 'Choose which URL Engine to use.');
-
-define('USU_REDIRECT_TITLE', 'Enable automatic redirects?');
-define('USU_REDIRECT_DESCRIPTION', 'This will activate the automatic redirect code and send 301 headers for old to new URLs.');
-
-define('USU_VERSION_TITLE', 'Plugin Version');
-define('USU_VERSION_DESCRIPTION', 'The currently-installed version of <em>USU</em>.');
+define('USU_ENABLED_TITLE', '启用备用 URL？');  
+define('USU_ENABLED_DESCRIPTION', '这是一个全局设置，可以启用（<b>true</b>）或禁用（<b>false</b>）备用 URL 的生成。');  
+  
+define('USU_DEBUG_TITLE', '启用调试日志？yyyymmmdd-hhmmss.log</code>）。<br><br>启用调试可能会导致创建大量的日志文件，并可能对服务器性能产生不利影响。仅在绝对必要时启用此选项！');  
+  
+define('USU_CPATH_TITLE', '生成 cPath 参数');  
+define('USU_CPATH_DESCRIPTION', 'Zen Cart 默认会为产品页面生成 cPath 参数。这些参数用于保持链接的产品处于正确的分类中。在自动模式下，只有在需要时才会添加 cPath。');  
+  
+define('USU_END_TITLE', '备用 URL 以何结尾');  
+define('USU_END_DESCRIPTION', '如果您希望您的 URL 以某个特定后缀结尾，请在此处添加。常见的后缀有 \'.html\', \'.htm\'。将此字段留空则不会在生成的 URL 中添加后缀。');  
+  
+define('USU_FORMAT_TITLE', '备用 URL 的格式');  
+define('USU_FORMAT_DESCRIPTION', '您可以从常见生成格式列表中选择。<br><br><b>原始：</b><ul><li><i>分类：</i> category-name-c-34</li><li><i>产品：</i> product-name-p-54</li></ul><b>分类父级：</b><ul><li><i>分类：</i> parent-category-name-c-34</li><li><i>产品：</i> parent-product-name-p-54</li></ul>');  
+  
+define('USU_CATEGORY_DIR_TITLE', '将分类显示为目录');  
+define('USU_CATEGORY_DIR_DESCRIPTION', '您可以从常见生成格式列表中选择。<br><b>关闭：</b> 禁用将分类显示为目录<br><br><b>简短：</b> 使用“备用 URL 的格式”中的设置<br><br><b>完整：</b> 使用完整的分类路径<br><br>');  
+  
+define('USU_REMOVE_CHARS_TITLE', '移除有问题的字符');
+define('USU_REMOVE_CHARS_DESCRIPTION', '这允许您从生成的URL中移除某些有问题的字符。<br><br><i>非字母数字：</i> 移除所有非字母数字字符<br><i>标点符号：</i> 移除所有标点符号');  
+  
+define('USU_FILTER_PCRE_TITLE', '输入PCRE过滤规则');  
+define('USU_FILTER_PCRE_DESCRIPTION', '此设置使用PCRE规则来过滤URL。<br><br>在字符转换和移除特殊字符之前执行此过滤器。如果您想在URL中使用短横线 -，请使用单个空格。在正则表达式中，要转义一个字符，请使用 \\\\ 而不是单个 \\。<br><br>格式<b>必须</b>为：<b>find1=>replace1,find2=>replace2</b>。');  
+  
+define('USU_FILTER_SHORT_WORDS_TITLE', '过滤短词');  
+define('USU_FILTER_SHORT_WORDS_DESCRIPTION', '此设置将过滤“短”词，即长度小于或等于指定值的词，从任何生成的URL中。使用值<b>0</b>以包含<em>所有</em>词。');  
+  
+define('USU_FILTER_PAGES_TITLE', '将备用URL限制为以下页面');  
+define('USU_FILTER_PAGES_DESCRIPTION', '您可以在这里指定哪些页面将被重写，从而限制要重写的页面。如果没有指定页面，则所有页面都将被重写。<br><br>格式是逗号分隔的列表（中间有空格也可以），并且<b>必须</b>为：<b>page1,page2,page3</b> 或 <b>page1, page2, page3</b>');  
+  
+define('USU_ENGINE_TITLE', '选择URL引擎');  
+define('USU_ENGINE_DESCRIPTION', '选择要使用的URL引擎。');  
+  
+define('USU_REDIRECT_TITLE', '启用自动重定向？');  
+define('USU_REDIRECT_DESCRIPTION', '这将激活自动重定向代码，并为旧URL到新URL发送301头信息。');  
+  
+define('USU_VERSION_TITLE', '插件版本');  
+define('USU_VERSION_DESCRIPTION', '当前安装的<em>USU</em>插件版本。');

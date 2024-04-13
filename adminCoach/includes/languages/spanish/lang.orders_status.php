@@ -7,19 +7,19 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Orders Status',
-    'TABLE_HEADING_ORDERS_STATUS' => 'Orders Status',
-    'TABLE_HEADING_ORDERS_STATUS_ID' => 'Orders Status ID',
-    'TEXT_INFO_SORT_ORDER' => 'Sort Order: ',
-    'TEXT_INFO_ORDERS_STATUS_NAME' => 'Orders Status:',
-    'TEXT_INFO_INSERT_INTRO' => 'Please enter the new orders status with its related data',
-    'TEXT_INFO_DELETE_INTRO' => 'Are you sure you want to delete this order status?',
-    'TEXT_INFO_HEADING_NEW_ORDERS_STATUS' => 'New Orders Status',
-    'TEXT_INFO_HEADING_EDIT_ORDERS_STATUS' => 'Edit Orders Status',
-    'TEXT_INFO_HEADING_DELETE_ORDERS_STATUS' => 'Delete Orders Status',
-    'ERROR_REMOVE_DEFAULT_ORDER_STATUS' => 'Error: The default order status can not be removed. Please set another order status as default, and try again.',
-    'ERROR_STATUS_USED_IN_ORDERS' => 'Error: This order status is currently used in orders.',
-    'ERROR_STATUS_USED_IN_HISTORY' => 'Error: This order status is currently used in the order status history.',
+    'HEADING_TITLE' => '订单状态',  
+    'TABLE_HEADING_ORDERS_STATUS' => '订单状态',  
+    'TABLE_HEADING_ORDERS_STATUS_ID' => '订单状态ID',  
+    'TEXT_INFO_SORT_ORDER' => '排序顺序：',  
+    'TEXT_INFO_ORDERS_STATUS_NAME' => '订单状态：',  
+    'TEXT_INFO_INSERT_INTRO' => '请输入新的订单状态及其相关数据',  
+    'TEXT_INFO_DELETE_INTRO' => '您确定要删除此订单状态吗？',  
+    'TEXT_INFO_HEADING_NEW_ORDERS_STATUS' => '新订单状态',  
+    'TEXT_INFO_HEADING_EDIT_ORDERS_STATUS' => '编辑订单状态',  
+    'TEXT_INFO_HEADING_DELETE_ORDERS_STATUS' => '删除订单状态',  
+    'ERROR_REMOVE_DEFAULT_ORDER_STATUS' => '错误：默认订单状态不能被删除。请先设置另一个订单状态为默认状态，然后再试一次。',  
+    'ERROR_STATUS_USED_IN_ORDERS' => '错误：此订单状态当前正在订单中使用。',  
+    'ERROR_STATUS_USED_IN_HISTORY' => '错误：此订单状态当前正在订单状态历史记录中使用。',
 ];
 
 return $define;

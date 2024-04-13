@@ -7,10 +7,10 @@
 */
 
 $define = [
-    'ENTRY_CUSTOMER' => 'CUSTOMER:',
-    'ENTRY_PAYMENT_METHOD' => 'Payment Method:',
-    'ENTRY_SHIPPING' => 'Shipping:',
-    'TEXT_INFO_ATTRIBUTE_FREE' => '&nbsp;-&nbsp;FREE',
+    'ENTRY_CUSTOMER' => '客户：',  
+    'ENTRY_PAYMENT_METHOD' => '支付方式：',  
+    'ENTRY_SHIPPING' => '配送方式：',  
+    'TEXT_INFO_ATTRIBUTE_FREE' => '&nbsp;-&nbsp;免费',
 ];
 
 return $define;

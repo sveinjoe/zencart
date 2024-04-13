@@ -7,19 +7,19 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Banner Statistics',
-    'TABLE_HEADING_SOURCE' => 'Source',
-    'TABLE_HEADING_VIEWS' => 'Impressions',
-    'TABLE_HEADING_CLICKS' => 'Clicks',
-    'TEXT_BANNERS_DAILY_STATISTICS' => '%s Daily Statistics For %s %s',
-    'TEXT_BANNERS_MONTHLY_STATISTICS' => '%s Monthly Statistics For %s',
-    'TEXT_BANNERS_YEARLY_STATISTICS' => '%s Yearly Statistics',
-    'STATISTICS_TYPE_DAILY' => 'Daily',
-    'STATISTICS_TYPE_MONTHLY' => 'Monthly',
-    'STATISTICS_TYPE_YEARLY' => 'Yearly',
-    'TITLE_TYPE' => 'Type:',
-    'TITLE_YEAR' => 'Year:',
-    'TITLE_MONTH' => 'Month:',
+    'HEADING_TITLE' => '横幅统计',  
+    'TABLE_HEADING_SOURCE' => '来源',  
+    'TABLE_HEADING_VIEWS' => '展示次数',  
+    'TABLE_HEADING_CLICKS' => '点击次数',  
+    'TEXT_BANNERS_DAILY_STATISTICS' => '%s 每日统计 - %s %s',  
+    'TEXT_BANNERS_MONTHLY_STATISTICS' => '%s 每月统计 - %s',  
+    'TEXT_BANNERS_YEARLY_STATISTICS' => '%s 年度统计',  
+    'STATISTICS_TYPE_DAILY' => '每日',  
+    'STATISTICS_TYPE_MONTHLY' => '每月',  
+    'STATISTICS_TYPE_YEARLY' => '年度',  
+    'TITLE_TYPE' => '类型：',  
+    'TITLE_YEAR' => '年份：',  
+    'TITLE_MONTH' => '月份：',
 ];
 
 return $define;

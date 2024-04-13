@@ -7,20 +7,20 @@
 */
 
 $define = [
-    'HEADING_TITLE' => '%%TEXT_GV_NAME%%' . ' Release Queue',
-    'TABLE_HEADING_ORDERS_ID' => 'Order-No.',
-    'TABLE_HEADING_VOUCHER_VALUE' => '%%TEXT_GV_NAME%%' . ' Value',
-    'TABLE_HEADING_DATE_PURCHASED' => 'Date Purchased',
-    'TEXT_REDEEM_GV_MESSAGE_HEADER' => 'You recently purchased a ' . '%%TEXT_GV_NAME%%' . ' from our online store.',
-    'TEXT_REDEEM_GV_MESSAGE_RELEASED' => 'For security reasons this was not made immediately available to you. ',
-    'TEXT_REDEEM_GV_MESSAGE_AMOUNT' => 'The ' . '%%TEXT_GV_NAME%%' . '(s) you purchased are worth %s',
-    'TEXT_REDEEM_GV_MESSAGE_THANKS' => 'Thank you for shopping with us!',
-    'TEXT_REDEEM_GV_MESSAGE_BODY' => '',
-    'TEXT_REDEEM_GV_MESSAGE_FOOTER' => '',
-    'TEXT_REDEEM_GV_SUBJECT' => '%%TEXT_GV_NAME%%' . ' Purchase',
-    'TEXT_REDEEM_GV_SUBJECT_ORDER' => ' Order #',
-    'TEXT_EDIT_ORDER' => 'Edit Order ID# ',
-    'TEXT_GV_NONE' => 'No ' . '%%TEXT_GV_NAME%%' . ' to release',
+    'HEADING_TITLE' => '%%TEXT_GV_NAME%%' . ' 发放队列',  
+    'TABLE_HEADING_ORDERS_ID' => '订单号',  
+    'TABLE_HEADING_VOUCHER_VALUE' => '%%TEXT_GV_NAME%%' . ' 金额',  
+    'TABLE_HEADING_DATE_PURCHASED' => '购买日期',  
+    'TEXT_REDEEM_GV_MESSAGE_HEADER' => '您最近在我们的在线商店购买了 ' . '%%TEXT_GV_NAME%%' . '。',  
+    'TEXT_REDEEM_GV_MESSAGE_RELEASED' => '出于安全原因，此商品并未立即向您开放。 ',  
+    'TEXT_REDEEM_GV_MESSAGE_AMOUNT' => '您购买的 ' . '%%TEXT_GV_NAME%%' . ' 价值为 %s',  
+    'TEXT_REDEEM_GV_MESSAGE_THANKS' => '感谢您在我们这里购物！',  
+    'TEXT_REDEEM_GV_MESSAGE_BODY' => '',  
+    'TEXT_REDEEM_GV_MESSAGE_FOOTER' => '',  
+    'TEXT_REDEEM_GV_SUBJECT' => '%%TEXT_GV_NAME%%' . ' 购买',  
+    'TEXT_REDEEM_GV_SUBJECT_ORDER' => ' 订单#',  
+    'TEXT_EDIT_ORDER' => '编辑订单ID# ',  
+    'TEXT_GV_NONE' => '没有可发放的 ' . '%%TEXT_GV_NAME%%' . ' ',
 ];
 
 return $define;

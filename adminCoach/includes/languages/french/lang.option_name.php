@@ -7,13 +7,13 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Option Name Sort Order',
-    'TEXT_EDIT_ALL' => 'Editing All Option Names',
-    'TEXT_CURRENT_NAME' => 'Current Name',
-    'TEXT_OPTION_TYPE' => 'Type',
-    'TEXT_SELECTED_LANGUAGE' => 'Selected Language: ',
-    'TEXT_UPDATE_SUBMIT' => 'Update Sort Order',
-    'SUCCESS_OPTION_SORT_ORDER' => 'Successful Update of Option Name Sort Orders',
+    'HEADING_TITLE' => '选项名称排序',  
+    'TEXT_EDIT_ALL' => '编辑所有选项名称',  
+    'TEXT_CURRENT_NAME' => '当前名称',  
+    'TEXT_OPTION_TYPE' => '类型',  
+    'TEXT_SELECTED_LANGUAGE' => '所选语言：',  
+    'TEXT_UPDATE_SUBMIT' => '更新排序',  
+    'SUCCESS_OPTION_SORT_ORDER' => '选项名称排序更新成功',
 ];
 
 return $define;

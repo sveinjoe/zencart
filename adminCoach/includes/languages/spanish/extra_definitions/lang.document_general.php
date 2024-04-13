@@ -7,15 +7,15 @@
 */
 
 $define = [
-    'TEXT_DOCUMENT_STATUS' => 'Document Status:',
-    'TEXT_DOCUMENT_DATE_AVAILABLE' => 'Date Available:',
-    'TEXT_DOCUMENT_AVAILABLE' => 'Available',
-    'TEXT_DOCUMENT_NAME' => 'Document Name:',
-    'TEXT_DOCUMENT_DETAILS' => 'Document Contents:',
-    'TEXT_DOCUMENT_IMAGE' => 'Document Image:',
-    'TEXT_DOCUMENT_IMAGE_DIR' => 'Upload to directory:',
-    'TEXT_DOCUMENT_URL' => 'Document URL:',
-    'TEXT_DOCUMENT_URL_WITHOUT_HTTP' => '<small>(without http://)</small>',
+    'TEXT_DOCUMENT_STATUS' => '文档状态：',  
+    'TEXT_DOCUMENT_DATE_AVAILABLE' => '可用日期：',  
+    'TEXT_DOCUMENT_AVAILABLE' => '可用',  
+    'TEXT_DOCUMENT_NAME' => '文档名称：',  
+    'TEXT_DOCUMENT_DETAILS' => '文档内容：',  
+    'TEXT_DOCUMENT_IMAGE' => '文档图片：',  
+    'TEXT_DOCUMENT_IMAGE_DIR' => '上传到目录：',  
+    'TEXT_DOCUMENT_URL' => '文档 URL：',  
+    'TEXT_DOCUMENT_URL_WITHOUT_HTTP' => '<small>（不包括 http://）</small>',
 ];
 
 return $define;

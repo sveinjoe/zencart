@@ -7,18 +7,18 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Media Types',
-    'TABLE_HEADING_MEDIA_TYPE' => 'Media Type',
-    'TABLE_HEADING_MEDIA_TYPE_EXT' => 'Extension',
-    'TEXT_HEADING_NEW_MEDIA_TYPE' => 'New Media Type',
-    'TEXT_HEADING_EDIT_MEDIA_TYPE' => 'Edit Media Type',
-    'TEXT_HEADING_DELETE_MEDIA_TYPES' => 'Delete Media Type',
-    'TEXT_MEDIA_TYPE_NAME' => 'Media Type Name',
-    'TEXT_MEDIA_TYPE_EXT' => 'Media Type Extension',
-    'TEXT_EXTENSION' => 'Extension: ',
-    'TEXT_NEW_INTRO' => 'Please fill out the following information for the new media type',
-    'TEXT_DELETE_INTRO' => 'Are you sure you want to delete this media type?',
-    'TEXT_DISPLAY_NUMBER_OF_MEDIA_TYPES' => 'Displaying <strong>%d</strong> to <strong>%d</strong> (of <strong>%d</strong> Media Types)',
+    'HEADING_TITLE' => '媒体类型',  
+    'TABLE_HEADING_MEDIA_TYPE' => '媒体类型',  
+    'TABLE_HEADING_MEDIA_TYPE_EXT' => '扩展名',  
+    'TEXT_HEADING_NEW_MEDIA_TYPE' => '新建媒体类型',  
+    'TEXT_HEADING_EDIT_MEDIA_TYPE' => '编辑媒体类型',  
+    'TEXT_HEADING_DELETE_MEDIA_TYPES' => '删除媒体类型',  
+    'TEXT_MEDIA_TYPE_NAME' => '媒体类型名称',  
+    'TEXT_MEDIA_TYPE_EXT' => '媒体类型扩展名',  
+    'TEXT_EXTENSION' => '扩展名：',  
+    'TEXT_NEW_INTRO' => '请填写以下新媒体类型的信息',  
+    'TEXT_DELETE_INTRO' => '您确定要删除这个媒体类型吗？',  
+    'TEXT_DISPLAY_NUMBER_OF_MEDIA_TYPES' => '显示 <strong>%d</strong> 到 <strong>%d</strong> （共 <strong>%d</strong> 个媒体类型）',
 ];
 
 return $define;

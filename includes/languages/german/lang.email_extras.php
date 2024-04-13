@@ -1,0 +1,33 @@
+<?php
+$define = [
+    'EMAIL_LOGO_ALT_TITLE_TEXT' => 'Zen Cart! Die Kunst des E-Commerce',  
+    'EMAIL_LOGO_FILENAME' => 'header.jpg',  
+    'EMAIL_LOGO_WIDTH' => '550',  
+    'EMAIL_LOGO_HEIGHT' => '110',  
+    'EMAIL_EXTRA_HEADER_INFO' => '',  
+    'OFFICE_FROM' => '<strong>Absender:</strong>',  
+    'OFFICE_EMAIL' => '<strong>E-Mail:</strong>',  
+    'OFFICE_USE' => '<strong>Nur für Bürogebrauch:</strong>',  
+    'OFFICE_LOGIN_NAME' => '<strong>Login-Name:</strong>',  
+    'OFFICE_LOGIN_EMAIL' => '<strong>Login-E-Mail:</strong>',  
+    'OFFICE_LOGIN_PHONE' => '<strong>Telefon:</strong>',  
+    'OFFICE_LOGIN_FAX' => '<strong>Fax:</strong>',  
+    'OFFICE_IP_ADDRESS' => '<strong>IP-Adresse:</strong>',  
+    'OFFICE_HOST_ADDRESS' => '<strong>Host-Adresse:</strong>',  
+    'OFFICE_DATE_TIME' => '<strong>Datum und Uhrzeit:</strong>',  
+    'EMAIL_TEXT_TELEPHONE' => 'Telefon: ',  
+    'EMAIL_DISCLAIMER' => 'Diese E-Mail-Adresse wurde uns von Ihnen oder von einem unserer Kunden gegeben. Wenn Sie das Gefühl haben, dass Sie diese E-Mail irrtümlich erhalten haben, bitte senden Sie eine E-Mail an %s ',  
+    'EMAIL_SPAM_DISCLAIMER' => '',  
+    'EMAIL_ORDER_MESSAGE' => '',  
+    'EMAIL_FOOTER_COPYRIGHT' => 'Copyright (c) ' . date('Y') . ' <a href="' . zen_href_link(FILENAME_DEFAULT) . '">' . STORE_NAME . '</a>. Unterstützt von <a href="https://www.zen-cart.com">Zen Cart</a>',  
+    'TEXT_UNSUBSCRIBE' => "\n\nUm sich von zukünftigen Newsletter und Werbe-E-Mails abzumelden, einfach auf den folgenden Link klicken: \n",  
+    'EMAIL_ADVISORY' => '-----' . "\n" . '<strong>WICHTIG:</strong> Zum Schutz Ihrer Daten und zur Verhinderung von böswilliger Nutzung werden alle E-Mails, die über diese Website versendet werden, protokolliert und ihre Inhalte aufgezeichnet und dem Ladenbesitzer zugänglich gemacht. Wenn Sie das Gefühl haben, dass Sie diese E-Mail irrtümlich erhalten haben, bitte senden Sie eine E-Mail an ' . STORE_OWNER_EMAIL_ADDRESS . "\n\n",  
+    'EMAIL_ADVISORY_INCLUDED_WARNING' => '<strong>Diese Nachricht ist in allen E-Mails von dieser Website enthalten:</strong>',
+    'SEND_EXTRA_CREATE_ACCOUNT_EMAILS_TO_SUBJECT' => '[CREATE ACCOUNT]',
+    'SEND_EXTRA_GV_CUSTOMER_EMAILS_TO_SUBJECT' => '[GV CUSTOMER SENT]',
+    'SEND_EXTRA_NEW_ORDERS_EMAILS_TO_SUBJECT' => '[NEW ORDER]',
+    'EMAIL_TEXT_SUBJECT_LOWSTOCK' => 'Warnung: Lagerbestand niedrig',  
+    'SEND_EXTRA_LOW_STOCK_EMAIL_TITLE' => 'Lagerbestand Bericht: ',
+];
+
+return $define;

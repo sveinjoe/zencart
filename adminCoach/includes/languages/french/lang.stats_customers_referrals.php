@@ -7,13 +7,13 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Customers Referral Report',
-    'TEXT_INFO_SELECT_REFERRAL' => 'Select a Referral/Coupon Code',
-    'TEXT_REFERRAL_UNKNOWN' => 'Unknown',
-    'TEXT_INFO_START_DATE' => 'Start Date (m-d-y)',
-    'TEXT_INFO_END_DATE' => 'End Date (m-d-y)',
-    'TEXT_ORDER_NUMBER' => 'Order #',
-    'TEXT_COUPON_ID' => 'Discount Coupon ID#',
+    'HEADING_TITLE' => '客户推荐报告',  
+    'TEXT_INFO_SELECT_REFERRAL' => '选择一个推荐/优惠券代码',  
+    'TEXT_REFERRAL_UNKNOWN' => '未知',  
+    'TEXT_INFO_START_DATE' => '开始日期 (月-日-年)',  
+    'TEXT_INFO_END_DATE' => '结束日期 (月-日-年)',  
+    'TEXT_ORDER_NUMBER' => '订单号',  
+    'TEXT_COUPON_ID' => '折扣优惠券ID#',
 ];
 
 return $define;

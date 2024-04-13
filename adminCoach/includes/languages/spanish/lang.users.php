@@ -7,22 +7,22 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Admin Users',
-    'IMAGE_ADD_USER' => 'Add User',
-    'TEXT_ADMIN_PROFILE' => 'Profile',
-    'TEXT_CHOOSE_PROFILE' => 'Choose Profile',
-    'TEXT_NO_USERS_FOUND' => 'No Admin Users found',
-    'TEXT_CONFIRM_DELETE' => 'Delete requested. Please confirm: ',
-    'ERROR_NO_USER_DEFINED' => 'The option requested requires a username to be specified.',
-    'ERROR_USER_MUST_HAVE_PROFILE' => 'User must be assigned a profile.',
-    'ERROR_DUPLICATE_USER' => 'Sorry, an admin user of that name already exists. Please select another name.',
-    'ERROR_ADMIN_NAME_TOO_SHORT' => 'Admin user names must have at least %s characters.',
-    'ERROR_PASSWORD_TOO_SHORT' => 'Passwords must contain at least %s characters.',
-    'SUCCESS_NEW_USER_ADDED' => 'New Admin User "%s" created.',
-    'SUCCESS_USER_DETAILS_UPDATED' => 'User details updated.',
-    'SUCCESS_PASSWORD_UPDATED' => 'Password updated.',
-    'ERROR_ADMIN_INVALID_EMAIL_ADDRESS' => 'The email address you provided seems to be invalid.',
-    'ERROR_ADMIN_INVALID_CHARS_IN_USERNAME' => 'The admin username you entered contains invalid characters.',
+    'HEADING_TITLE' => '管理员用户',  
+    'IMAGE_ADD_USER' => '添加用户',  
+    'TEXT_ADMIN_PROFILE' => '个人资料',  
+    'TEXT_CHOOSE_PROFILE' => '选择个人资料',  
+    'TEXT_NO_USERS_FOUND' => '未找到管理员用户',  
+    'TEXT_CONFIRM_DELETE' => '已请求删除。请确认：',  
+    'ERROR_NO_USER_DEFINED' => '所请求的选项需要指定用户名。',  
+    'ERROR_USER_MUST_HAVE_PROFILE' => '用户必须分配个人资料。',  
+    'ERROR_DUPLICATE_USER' => '抱歉，已存在具有该名称的管理员用户。请选择其他名称。',  
+    'ERROR_ADMIN_NAME_TOO_SHORT' => '管理员用户名必须至少有 %s 个字符。',  
+    'ERROR_PASSWORD_TOO_SHORT' => '密码必须至少包含 %s 个字符。',  
+    'SUCCESS_NEW_USER_ADDED' => '已创建新的管理员用户 "%s"。',  
+    'SUCCESS_USER_DETAILS_UPDATED' => '用户详细信息已更新。',  
+    'SUCCESS_PASSWORD_UPDATED' => '密码已更新。',  
+    'ERROR_ADMIN_INVALID_EMAIL_ADDRESS' => '您提供的电子邮件地址似乎无效。',  
+    'ERROR_ADMIN_INVALID_CHARS_IN_USERNAME' => '您输入的管理员用户名包含无效字符。',
 ];
 
 return $define;

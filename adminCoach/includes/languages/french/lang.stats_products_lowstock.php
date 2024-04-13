@@ -7,8 +7,8 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Product Stock Report',
-    'TABLE_HEADING_VIEWED' => 'Quantity',
+    'HEADING_TITLE' => '产品库存报告',  
+    'TABLE_HEADING_VIEWED' => '数量',
 ];
 
 return $define;

@@ -7,8 +7,8 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Admin Account',
-    'SUCCESS_PASSWORD_UPDATED' => 'Password updated.',
+    'HEADING_TITLE' => '管理员账户',  
+    'SUCCESS_PASSWORD_UPDATED' => '密码已更新。',
 ];
 
 return $define;

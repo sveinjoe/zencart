@@ -7,21 +7,21 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Record Companies',
-    'TABLE_HEADING_RECORD_COMPANY' => 'Record Company',
-    'TEXT_NEW_INTRO' => 'Please enter the details of the new Record Company below.',
-    'TEXT_EDIT_INTRO' => 'Please amend the details of the Record Company below.',
-    'TEXT_DELETE_INTRO' => 'Are you sure you want to delete this Record Company.',
-    'TEXT_RECORD_COMPANY_NAME' => 'Record Company Name',
-    'TEXT_RECORD_COMPANY_IMAGE' => 'Record Company Image',
-    'TEXT_RECORD_COMPANY_URL' => 'Record Company Web Site',
-    'TEXT_RECORD_COMPANY_IMAGE_DIR' => 'Image Directory&nbsp;',
-    'TEXT_HEADING_NEW_RECORD_COMPANY' => 'New Record Company',
-    'TEXT_HEADING_EDIT_RECORD_COMPANY' => 'Edit Record Company',
-    'TEXT_HEADING_DELETE_RECORD_COMPANY' => 'Delete Record Company',
-    'TEXT_DISPLAY_NUMBER_OF_RECORD_COMPANIES' => 'Displaying <strong>%d</strong> to <strong>%d</strong> (of <strong>%d</strong> Record Companies)',
-    'TEXT_DELETE_PRODUCTS' => 'Delete this Record Company and all items linked to it?',
-    'TEXT_DELETE_WARNING_PRODUCTS' => '<b>WARNING:</b> There are %s items still linked to this Record Company!',
+    'HEADING_TITLE' => '唱片公司',  
+    'TABLE_HEADING_RECORD_COMPANY' => '唱片公司',  
+    'TEXT_NEW_INTRO' => '请在下方输入新唱片公司的详细信息。',  
+    'TEXT_EDIT_INTRO' => '请在下方修改唱片公司的详细信息。',  
+    'TEXT_DELETE_INTRO' => '您确定要删除这个唱片公司吗？',  
+    'TEXT_RECORD_COMPANY_NAME' => '唱片公司名称',  
+    'TEXT_RECORD_COMPANY_IMAGE' => '唱片公司图片',  
+    'TEXT_RECORD_COMPANY_URL' => '唱片公司网站',  
+    'TEXT_RECORD_COMPANY_IMAGE_DIR' => '图片目录&nbsp;',  
+    'TEXT_HEADING_NEW_RECORD_COMPANY' => '新建唱片公司',  
+    'TEXT_HEADING_EDIT_RECORD_COMPANY' => '编辑唱片公司',  
+    'TEXT_HEADING_DELETE_RECORD_COMPANY' => '删除唱片公司',  
+    'TEXT_DISPLAY_NUMBER_OF_RECORD_COMPANIES' => '显示 <strong>%d</strong> 到 <strong>%d</strong> 条记录（共 <strong>%d</strong> 条唱片公司记录）',  
+    'TEXT_DELETE_PRODUCTS' => '删除这个唱片公司及其所有关联项目？',  
+    'TEXT_DELETE_WARNING_PRODUCTS' => '<b>警告：</b> 还有 %s 个项目与这个唱片公司关联！'
 ];
 
 return $define;

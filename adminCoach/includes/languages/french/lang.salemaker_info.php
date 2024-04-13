@@ -7,57 +7,57 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Salemaker',
-    'SUBHEADING_TITLE' => 'Salemaker Usage Tips:',
+  'HEADING_TITLE' => '促销管理器',  
+  'SUBHEADING_TITLE' => '促销管理器使用提示：',
     'INFO_TEXT' => '<ul>
-                      <li>
-                        Always use a dot \'.\' as the decimal separator for Deduction and Price Range.
-                      </li>
-                      <li>
-                        Enter amounts in the same currency as when creating/editing a product.
-                      </li>
-                      <li>
-                        In the Deduction fields, you can enter an amount or a percentage to deduct,
-                        or a replacement price. (eg. deduct $5.00 from all prices, deduct 10% from
-                        all prices or change all prices to $25.00)
-                      </li>
-                      <li>
-                        Entering a price range restricts the products that will be affected. (eg.
-                        only products from $50.00 to $150.00)
-                      </li>
-                      <li>
-                        You must choose the action to take if a product is a special <i>and</i> is subject to this sale:
-						<ul>
-                          <li>
-                            <strong>Ignore Specials Price - Apply to Product Price and Replace Special</strong><br>
-							The sale deduction will be applied to the regular price of the product.
-                            (eg. Regular price $10.00, Specials price is $9.50, Sale Condition is 10%.
-							The product\'s final price will show $9.00 on sale. The Specials price is ignored.)
-                          </li>
-                          <li>
-                            <strong>Ignore Sale Condition - No Sale Applied When Special Exists</strong><br>
-                            The sale deduction will not be applied to Specials. The Specials price will display 
-                            independently of the sale. (eg. Regular price $10.00, Specials price is $9.50,
-                            Sale Condition is 10%. The product\'s final price will show $9.50 on sale.
-                            The Sale Condition is ignored.)
-                          </li>
-                          <li>
-                            <strong>Apply the Sale Deduction to the Special Price - Otherwise Apply to Price</strong><br>
-                            The sale deduction will be applied to the Special price. A compounded price will be displayed.
-                            (eg. Regular price $10.00, Specials price is $9.50, SaleCondition is 10%. The product\'s
-                            final price will show $8.55. An additional 10% off the Specials price.)
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        Leaving the Start Date empty will start the sale immediately.
-                      </li>
-                      <li>
-                        Leave the End Date empty if you do not want the sale to expire.</li>
-                      <li>
-                        Checking a category automatically includes the sub-categories.
-                      </li>
-                    </ul>',
+                      <li>  
+                        对于折扣和价格范围，请始终使用点 '.' 作为小数点分隔符。  
+                      </li>  
+                      <li>  
+                        在创建/编辑产品时，请输入相同货币的金额。  
+                      </li>  
+                      <li>  
+                        在折扣字段中，您可以输入要扣除的金额或百分比，或替换价格。  
+                        （例如：从所有价格中扣除$5.00，从所有价格中扣除10%，或将所有价格更改为$25.00）  
+                      </li>  
+                      <li>  
+                        输入价格范围将限制受影响的产品。  
+                        （例如：仅限于从$50.00到$150.00之间的产品）  
+                      </li>  
+                      <li>  
+                        如果产品是特价商品并且适用于此次销售，您必须选择要采取的操作：  
+                        <ul>  
+                          <li>  
+                            <strong>忽略特价 - 应用于产品价格并替换特价</strong><br>  
+                            销售折扣将应用于产品的常规价格。  
+                            （例如：常规价格为$10.00，特价是$9.50，销售条件是10%。  
+                            产品的最终销售价将显示为$9.00。特价被忽略。）  
+                          </li>  
+                        </ul>  
+                      </li><li>  
+                      <strong>忽略促销条件 - 当特价存在时不应用促销</strong><br>  
+                      促销折扣不会应用于特价商品。特价价格将独立于促销显示。  
+                      （例如：常规价格$10.00，特价是$9.50，促销条件是10%。产品最终售价将显示为$9.50。  
+                      促销条件被忽略。）  
+                    </li>  
+                    <li>  
+                      <strong>将促销折扣应用于特价 - 否则应用于价格</strong><br>  
+                      促销折扣将应用于特价价格。将显示一个综合价格。  
+                      （例如：常规价格$10.00，特价是$9.50，促销条件是10%。产品最终售价将显示为$8.55。  
+                      在特价基础上再减10%。）  
+                    </li>  
+                    </ul>  
+                    </li>  
+                    <li>  
+                      留空起始日期将立即开始促销。  
+                    </li>  
+                    <li>  
+                      如果您不希望促销过期，请留空结束日期。  
+                    </li>  
+                    <li>  
+                      勾选一个分类将自动包括其子类。  
+                    </li>
+                  </ul>',
 ];
 
 return $define;

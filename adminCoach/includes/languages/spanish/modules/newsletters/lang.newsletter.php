@@ -7,20 +7,20 @@
 */
 
 $define = [
-    'TEXT_COUNT_CUSTOMERS' => 'Customers receiving newsletter: %s',
-    'HEADING_TITLE' => 'Newsletter Manager',
-    'TEXT_NEWSLETTER_MODULE' => 'Module:',
-    'TEXT_NEWSLETTER_TITLE' => 'Subject:',
-    'TEXT_NEWSLETTER_CONTENT' => 'Text-Only <br>Content:',
-    'TEXT_NEWSLETTER_CONTENT_HTML' => 'Rich Text <br>Content:',
-    'TEXT_NEWSLETTER_DATE_ADDED' => 'Date Added:',
-    'TEXT_NEWSLETTER_DATE_SENT' => 'Date Sent:',
-    'TEXT_INFO_DELETE_INTRO' => 'Are you sure you want to delete this newsletter?',
-    'TEXT_PLEASE_SELECT_AUDIENCE' => 'Please select the audience for this newsletter mailing: ',
-    'TEXT_PLEASE_WAIT' => 'Please wait .. sending emails ..<br><br>Please do not interrupt this process!',
-    'TEXT_FINISHED_SENDING_EMAILS' => 'Finished sending e-mails!',
-    'ERROR_NEWSLETTER_TITLE' => 'Error: Newsletter title required',
-    'ERROR_NEWSLETTER_MODULE' => 'Error: Newsletter module required',
+    'TEXT_COUNT_CUSTOMERS' => '接收新闻信的客户数: %s',  
+    'HEADING_TITLE' => '新闻信管理器',  
+    'TEXT_NEWSLETTER_MODULE' => '模块:',  
+    'TEXT_NEWSLETTER_TITLE' => '主题:',  
+    'TEXT_NEWSLETTER_CONTENT' => '纯文本内容:<br>',  
+    'TEXT_NEWSLETTER_CONTENT_HTML' => '富文本内容:<br>',  
+    'TEXT_NEWSLETTER_DATE_ADDED' => '添加日期:',  
+    'TEXT_NEWSLETTER_DATE_SENT' => '发送日期:',  
+    'TEXT_INFO_DELETE_INTRO' => '你确定要删除这条新闻信吗？',  
+    'TEXT_PLEASE_SELECT_AUDIENCE' => '请选择这条新闻信的发送对象：',  
+    'TEXT_PLEASE_WAIT' => '请稍候..正在发送邮件..<br><br>请不要中断此过程！',  
+    'TEXT_FINISHED_SENDING_EMAILS' => '邮件发送完成！',  
+    'ERROR_NEWSLETTER_TITLE' => '错误：需要新闻信标题',  
+    'ERROR_NEWSLETTER_MODULE' => '错误：需要新闻信模块',
 ];
 
 return $define;

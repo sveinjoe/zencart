@@ -7,7 +7,7 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Alternative Navigation',
+    'HEADING_TITLE' => '替代导航',
 ];
 
 return $define;

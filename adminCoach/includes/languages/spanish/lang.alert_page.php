@@ -7,12 +7,12 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Warning!',
-    'ALERT_PART1' => 'Warning: You cannot access the admin area until you have',
-    'ALERT_RENAME_ADMIN' => 'renamed the admin folder.',
-    'ALERT_REMOVE_ZCINSTALL' => 'deleted the zc_install folder.<br>(Use your FTP program or your hosting control panel.)',
-    'ADMIN_RENAME_FAQ_NOTE' => 'Help for renaming the admin folder can be found here',
-    'ALERT_PART2' => 'Then, to access your admin area, type the admin URL into your browser, ie: <u>http://www.your_site.com/YourAdminFolder/</u> ',
+    'HEADING_TITLE' => '警告!',  
+    'ALERT_PART1' => '警告：在您执行以下操作之前，您无法访问管理区域',  
+    'ALERT_RENAME_ADMIN' => '重命名管理员文件夹。',  
+    'ALERT_REMOVE_ZCINSTALL' => '删除zc_install文件夹。<br>(使用您的FTP程序或您的主机控制面板。)',  
+    'ADMIN_RENAME_FAQ_NOTE' => '重命名管理员文件夹的帮助可以在这里找到',  
+    'ALERT_PART2' => '然后，要访问您的管理区域，请在您的浏览器中输入管理员URL，例如：<u>http://www.your_site.com/YourAdminFolder/</u> ',
 ];
 
 return $define;

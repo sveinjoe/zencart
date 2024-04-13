@@ -7,12 +7,12 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Define Pages Editor for: ',
-    'TEXT_FILE_DOES_NOT_EXIST' => 'File does not exist: %s',
-    'ERROR_FILE_NOT_WRITEABLE' => 'Error: I can not write to this file. Please set the right user permissions on: %s',
-    'TEXT_INFO_SELECT_FILE' => 'Select a file to edit ...',
-    'TEXT_INFO_EDITING' => 'Editing file:',
-    'TEXT_INFO_CAUTION' => 'Note: you should always edit the files located in your current template override directory, Example: /languages/' . 'language' . '/html_includes/YOUR_TEMPLATE_DIRECTORY<br>Be sure to make backups after changing your files.',
+    'HEADING_TITLE' => '页面编辑器定义：',  
+    'TEXT_FILE_DOES_NOT_EXIST' => '文件不存在：%s',  
+    'ERROR_FILE_NOT_WRITEABLE' => '错误：我无法写入此文件。请为该文件设置正确的用户权限：%s',  
+    'TEXT_INFO_SELECT_FILE' => '选择一个文件进行编辑...',  
+    'TEXT_INFO_EDITING' => '正在编辑文件：',  
+    'TEXT_INFO_CAUTION' => '注意：您应该始终编辑位于当前模板覆盖目录中的文件，例如：/languages/' . '语言' . '/html_includes/您的模板目录<br>修改文件后请确保进行备份。',
 ];
 
 return $define;

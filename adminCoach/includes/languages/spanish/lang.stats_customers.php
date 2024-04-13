@@ -7,8 +7,8 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Best Customer Orders-Total',
-    'TABLE_HEADING_TOTAL_PURCHASED' => 'Total Purchased',
+    'HEADING_TITLE' => '最佳客户订单-总额',  
+    'TABLE_HEADING_TOTAL_PURCHASED' => '总购买额',
 ];
 
 return $define;

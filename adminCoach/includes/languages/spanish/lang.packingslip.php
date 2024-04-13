@@ -7,8 +7,8 @@
 */
 
 $define = [
-    'ENTRY_CUSTOMER' => 'CUSTOMER:',
-    'ENTRY_PAYMENT_METHOD' => 'Payment Method:',
+    'ENTRY_CUSTOMER' => '客户：',  
+    'ENTRY_PAYMENT_METHOD' => '支付方式：',
 ];
 
 return $define;

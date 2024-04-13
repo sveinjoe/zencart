@@ -7,17 +7,17 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Coupon Export',
-    'HEADING_SUB1' => 'Review or Export Coupons',
-    'HEADING_SUB2' => 'Purge Log History',
-    'TEXT_ACTIVITY_EXPORT_FORMAT' => 'Export File Format:',
-    'TEXT_ACTIVITY_EXPORT_FILENAME' => 'Export Filename:',
-    'TEXT_ACTIVITY_EXPORT_SAVETOFILE' => 'Save to file on server? (otherwise will stream for download directly from this window)',
-    'TEXT_ACTIVITY_EXPORT_DEST' => 'Destination: ',
-    'SUCCESS_EXPORT_DISCOUNT_COUPON_LOG' => 'Export complete. ',
-    'FAILURE_EXPORT_DISCOUNT_COUPON_LOG' => 'ALERT: Export failed. Could not successfully write to file ',
-    'TEXT_INSTRUCTIONS' => '<u>INSTRUCTIONS</u><br>You can use this page to export your Discount Coupons to a CSV file.<br>
-<ol><li>Choose whether to display or export to a file.<li>Enter a filename. (must end in one of: .csv .txt .htm .html .xml)<li>Click Save to proceed.<li>Choose whether to save or open the file, depending on what your browser offers.</ol>',
+    'HEADING_TITLE' => '优惠券导出',  
+    'HEADING_SUB1' => '查看或导出优惠券',  
+    'HEADING_SUB2' => '清除日志历史',  
+    'TEXT_ACTIVITY_EXPORT_FORMAT' => '导出文件格式：',  
+    'TEXT_ACTIVITY_EXPORT_FILENAME' => '导出文件名：',  
+    'TEXT_ACTIVITY_EXPORT_SAVETOFILE' => '保存到服务器上的文件吗？（否则将直接从本窗口流式传输以供下载）',  
+    'TEXT_ACTIVITY_EXPORT_DEST' => '目标位置：',  
+    'SUCCESS_EXPORT_DISCOUNT_COUPON_LOG' => '导出完成。',  
+    'FAILURE_EXPORT_DISCOUNT_COUPON_LOG' => '警告：导出失败。无法成功写入文件',  
+    'TEXT_INSTRUCTIONS' => '<u>说明</u><br>您可以使用此页面将折扣优惠券导出为CSV文件。<br>  
+    <ol><li>选择是否显示或导出到文件。<li>输入文件名。（必须以以下之一结尾：.csv .txt .htm .html .xml）<li>点击保存以继续。<li>根据您的浏览器提供的选项，选择是保存还是打开文件。</ol>',
 ];
 
 return $define;

@@ -7,10 +7,10 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Most-Viewed Products',
-    'TABLE_HEADING_VIEWED' => 'Views',
-    'TEXT_REPORT_START_DATE' => 'Start Date',
-    'TEXT_REPORT_END_DATE' => 'End Date',
+    'HEADING_TITLE' => '最受欢迎的产品',  
+    'TABLE_HEADING_VIEWED' => '查看次数',  
+    'TEXT_REPORT_START_DATE' => '开始日期',  
+    'TEXT_REPORT_END_DATE' => '结束日期',
 ];
 
 return $define;

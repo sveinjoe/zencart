@@ -7,21 +7,21 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Group Pricing',
-    'TABLE_HEADING_GROUP_NAME' => 'Group Name',
-    'TABLE_HEADING_GROUP_AMOUNT' => '% Discount',
-    'TEXT_HEADING_NEW_PRICING_GROUP' => 'New Pricing Group',
-    'TEXT_HEADING_EDIT_PRICING_GROUP' => 'Edit Pricing Group',
-    'TEXT_HEADING_DELETE_PRICING_GROUP' => 'Delete Pricing Group',
-    'TEXT_NEW_INTRO' => 'Please fill out the following information for the new group',
-    'TEXT_DELETE_INTRO' => 'Are you sure you want to delete this group?',
-    'TEXT_DELETE_PRICING_GROUP' => 'Delete Pricing Group',
-    'TEXT_DELETE_WARNING_GROUP_MEMBERS' => '<b>WARNING:</b> There are %s customers still linked to this category!',
-    'TEXT_GROUP_PRICING_NAME' => 'Group Name: ',
-    'TEXT_GROUP_PRICING_AMOUNT' => 'Percentage Discount: ',
-    'TEXT_CUSTOMERS' => 'Customers in Group:',
-    'ERROR_GROUP_PRICING_CUSTOMERS_EXIST' => 'ERROR: Customers exist in that group. Please confirm that you wish to remove all members from the group and delete it.',
-    'ERROR_MODULE_NOT_CONFIGURED' => 'NOTE: You have group pricing definitions, but you have not enabled the group-pricing Order Total module.<br>Please go to Admin->Modules->Order Total->Membership Discount (ot_group_pricing) and install/configure the module.',
+    'HEADING_TITLE' => '分组定价',  
+    'TABLE_HEADING_GROUP_NAME' => '分组名称',  
+    'TABLE_HEADING_GROUP_AMOUNT' => '折扣百分比',  
+    'TEXT_HEADING_NEW_PRICING_GROUP' => '新建定价分组',  
+    'TEXT_HEADING_EDIT_PRICING_GROUP' => '编辑定价分组',  
+    'TEXT_HEADING_DELETE_PRICING_GROUP' => '删除定价分组',  
+    'TEXT_NEW_INTRO' => '请为新的分组填写以下信息',  
+    'TEXT_DELETE_INTRO' => '您确定要删除这个分组吗？',  
+    'TEXT_DELETE_PRICING_GROUP' => '删除定价分组',  
+    'TEXT_DELETE_WARNING_GROUP_MEMBERS' => '<b>警告：</b> 仍有 %s 个客户与这个分组相关联!',  
+    'TEXT_GROUP_PRICING_NAME' => '分组名称：',  
+    'TEXT_GROUP_PRICING_AMOUNT' => '折扣百分比：',  
+    'TEXT_CUSTOMERS' => '分组中的客户：',  
+    'ERROR_GROUP_PRICING_CUSTOMERS_EXIST' => '错误：该分组中存在客户。请确认您希望从分组中移除所有成员并删除它。',  
+    'ERROR_MODULE_NOT_CONFIGURED' => '注意：您有分组定价定义，但您尚未启用分组定价的订单总额模块。<br>请前往 管理->模块->订单总额->会员折扣 (ot_group_pricing) 并安装/配置该模块。',
 ];
 
 return $define;

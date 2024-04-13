@@ -10,7 +10,7 @@
  *
  * BOOTSTRAP v3.5.2
  */
-define('BOX_TOOLS_ZCA_BOOTSTRAP_COLORS', 'ZCA Bootstrap Colors');
-
-define('SUCCESS_ZCA_BOOTSTRAP_COLORS_INSTALLED', 'ZCA Bootstrap Colors (v%s) was successfully installed.');
-define('SUCCESS_ZCA_BOOTSTRAP_COLORS_UPDATED', 'ZCA Bootstrap Colors was successfully updated to v%s.');
+define('BOX_TOOLS_ZCA_BOOTSTRAP_COLORS', 'ZCA Bootstrap 颜色');  
+  
+define('SUCCESS_ZCA_BOOTSTRAP_COLORS_INSTALLED', 'ZCA Bootstrap 颜色（v%s）已成功安装。');  
+define('SUCCESS_ZCA_BOOTSTRAP_COLORS_UPDATED', 'ZCA Bootstrap 颜色已成功更新至 v%s。');

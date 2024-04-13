@@ -5,22 +5,22 @@
  * @version $Id: Scott C Wilson 2022 Jun 04 New in v1.5.8-alpha $
 */
 $define = [
-    'HEADING_TITLE' => 'Customer Groups',
-    'TABLE_HEADING_GROUP_NAME' => 'Group Name',
-    'TABLE_HEADING_GROUP_CUSTOMER_COUNT' => '# of Customers',
-    'TABLE_HEADING_GROUP_COMMENTS' => 'Comment/Description',
-    'TEXT_HEADING_ADD_GROUP' => 'Add Group',
-    'TEXT_HEADING_EDIT_GROUP' => 'Edit Group',
-    'TEXT_HEADING_DELETE_GROUP' => 'Delete Group',
-    'TEXT_NO_GROUPS_FOUND' => 'No groups found. Click INSERT to create one.',
-    'TEXT_NEW_INTRO' => 'Please describe the new group',
-    'TEXT_DELETE_INTRO' => 'Are you sure you want to delete this group?',
-    'TEXT_DELETE_EVEN_IF_CUSTOMERS_ASSIGNED' => 'Delete even though group has customers assigned',
-    'TEXT_DELETE_WARNING_GROUP_MEMBERS_EXIST' => '<b>WARNING:</b> There are %s customers still linked to this group!',
-    'TEXT_GROUP_NAME' => 'Group Name:',
-    'TEXT_GROUP_COMMENT' => 'Comment/Description:',
-    'TEXT_CUSTOMERS_IN_GROUP' => 'Customers in Group:',
-    'ERROR_GROUP_STILL_HAS_CUSTOMERS' => 'ERROR: Customers are assigned to this group. Please confirm that you wish to remove all members from the group and delete it.',
+    'HEADING_TITLE' => '客户组',  
+    'TABLE_HEADING_GROUP_NAME' => '组名',  
+    'TABLE_HEADING_GROUP_CUSTOMER_COUNT' => '客户数量',  
+    'TABLE_HEADING_GROUP_COMMENTS' => '备注/描述',  
+    'TEXT_HEADING_ADD_GROUP' => '添加组',  
+    'TEXT_HEADING_EDIT_GROUP' => '编辑组',  
+    'TEXT_HEADING_DELETE_GROUP' => '删除组',  
+    'TEXT_NO_GROUPS_FOUND' => '未找到任何组。点击“插入”来创建一个。',  
+    'TEXT_NEW_INTRO' => '请描述新组',  
+    'TEXT_DELETE_INTRO' => '您确定要删除这个组吗？',  
+    'TEXT_DELETE_EVEN_IF_CUSTOMERS_ASSIGNED' => '即使组中有已分配的客户也删除',  
+    'TEXT_DELETE_WARNING_GROUP_MEMBERS_EXIST' => '<b>警告：</b> 仍有%s个客户与这个组相关联！',  
+    'TEXT_GROUP_NAME' => '组名：',  
+    'TEXT_GROUP_COMMENT' => '备注/描述：',  
+    'TEXT_CUSTOMERS_IN_GROUP' => '组中的客户：',  
+    'ERROR_GROUP_STILL_HAS_CUSTOMERS' => '错误：这个组仍有客户被分配。请确认您希望从组中移除所有成员并删除它。'
 ];
 
 return $define;

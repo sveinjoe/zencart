@@ -7,23 +7,23 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Admin Login',
-    'HEADING_TITLE_EXPIRED' => 'Admin Login - Password Expired',
-    'TEXT_SUBMIT' => 'Submit',
-    'TEXT_ADMIN_PASS' => 'Admin Password',
-    'TEXT_ADMIN_OLD_PASSWORD' => 'Old Password',
-    'TEXT_ADMIN_NEW_PASSWORD' => 'New Password',
-    'TEXT_ADMIN_CONFIRM_PASSWORD' => 'Confirm Password',
-    'ERROR_WRONG_LOGIN' => 'You entered the wrong username or password.',
-    'ERROR_SECURITY_ERROR' => 'There was a security error when trying to login.',
-    'TEXT_PASSWORD_FORGOTTEN' => 'Forgot Password?',
-    'LOGIN_EXPIRY_NOTICE' => '',
-    'ERROR_PASSWORD_EXPIRED' => 'NOTE: Your password has expired. Please select a new password. Your password <strong>must contain both NUMBERS and LETTERS and minimum 7 characters.</strong>',
-    'TEXT_TEMPORARY_PASSWORD_MUST_BE_CHANGED' => 'For security reasons, your temporary password needs to be changed. Please select a new password.<br>Your password <strong>must contain both NUMBERS and LETTERS and minimum 7 characters.</strong>',
-    'SUCCESS_PASSWORD_UPDATED' => 'Password updated',
-    'TEXT_EMAIL_SUBJECT_LOGIN_FAILURES' => 'Admin login failure notice',
-    'TEXT_EMAIL_MULTIPLE_LOGIN_FAILURES' => 'Important Notice: There have been multiple unsuccessful login attempts to your administrative account. For your protection and for system security, after 6 attempts the account will be locked for a minimum of 30 minutes, during which you will be unable to login even if you remember your password. Continued attempts to login will continue to lock the account for another 30 minutes. You will not be able to do password resets during this time. Apologies for the inconvenience.' . "\n\nThe last login attempt was from this IP address: %s.\n\n\n",
-    'EXPIRED_DUE_TO_SSL' => 'Note: Your password has expired because your site has changed from non-SSL (less secure) to being SSL-protected (more secure). Changing your password under SSL is an important step to greater security. Sorry for any inconvenience. Standard password expiry rules apply.',
+    'HEADING_TITLE' => '管理员登录',  
+    'HEADING_TITLE_EXPIRED' => '管理员登录 - 密码已过期',  
+    'TEXT_SUBMIT' => '提交',  
+    'TEXT_ADMIN_PASS' => '管理员密码',  
+    'TEXT_ADMIN_OLD_PASSWORD' => '旧密码',  
+    'TEXT_ADMIN_NEW_PASSWORD' => '新密码',  
+    'TEXT_ADMIN_CONFIRM_PASSWORD' => '确认密码',  
+    'ERROR_WRONG_LOGIN' => '您输入的用户名或密码错误。',  
+    'ERROR_SECURITY_ERROR' => '尝试登录时发生安全错误。',  
+    'TEXT_PASSWORD_FORGOTTEN' => '忘记密码？',  
+    'LOGIN_EXPIRY_NOTICE' => '', // 此处为空，未提供翻译内容  
+    'ERROR_PASSWORD_EXPIRED' => '注意：您的密码已过期。请选择一个新密码。您的密码<strong>必须包含数字和字母，且至少7个字符。</strong>',  
+    'TEXT_TEMPORARY_PASSWORD_MUST_BE_CHANGED' => '出于安全原因，您的临时密码需要更改。请选择一个新密码。<br>您的密码<strong>必须包含数字和字母，且至少7个字符。</strong>',  
+    'SUCCESS_PASSWORD_UPDATED' => '密码已更新',  
+    'TEXT_EMAIL_SUBJECT_LOGIN_FAILURES' => '管理员登录失败通知',  
+    'TEXT_EMAIL_MULTIPLE_LOGIN_FAILURES' => '重要通知：您的管理账户发生了多次登录失败尝试。为保护您的账户和系统安全，在6次尝试后，账户将被锁定至少30分钟，期间即使您记得密码也无法登录。继续尝试登录将会使账户继续锁定30分钟。在此期间，您无法进行密码重置。给您带来的不便，我们深表歉意。' . "\n\n最后一次登录尝试来自这个IP地址：%s。\n\n\n",
+    'EXPIRED_DUE_TO_SSL' => '注意：您的密码已过期，因为您的网站已从非SSL（较不安全）变更为使用SSL保护（更安全）。在SSL保护下更改您的密码是提升安全性的重要步骤。对于给您带来的任何不便，我们深表歉意。标准的密码过期规则仍然适用。',
 ];
 
 return $define;

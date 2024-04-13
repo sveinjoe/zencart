@@ -6,13 +6,12 @@
  * @copyright Copyright 2013 - 2015 Andrew Ballanger
  * @license http://www.gnu.org/licenses/gpl.txt GNU GPL V3.0
  */
-define('BOX_CONFIGURATION_USU', 'Ultimate URLs');
-define('BOX_CONFIGURATION_USU_UNINSTALL', 'Uninstall Ultimate URLs');
-
-// Messages used on the configuration page
-define('USU_PLUGIN_WARNING_SHORT_WORDS', 'The value entered for the <em>Filter short words</em> setting (<b>%s</b>) is not a positive integer; the setting has been defaulted to <b>0</b>.');
-define('USU_PLUGIN_WARNING_CATEGORY_DIR', 'The setting for <em>Display categories as directories</em> has been changed to <code>short</code>, since its <code>full</code> setting is incompatible with <em>Format of alternate URLs</em> setting of <code>parent</code>.');
-define('USU_PLUGIN_WARNING_FORMAT', 'The setting for <em>Format of alternate URLs</em> has been changed to <code>original</code>, since its <code>parent</code> setting is incompatible with <em>Display categories as directories</em> setting of <code>full</code>.');
-
-define('USU_INSTALLED_SUCCESS', BOX_CONFIGURATION_USU . ', v%s, has been successfully installed.');
-define('USU_UPDATED_SUCCESS', BOX_CONFIGURATION_USU . ' has been successfully updated from v%1$s to v%2$s.');
+define('BOX_CONFIGURATION_USU', 'Ultimate URL');  
+define('BOX_CONFIGURATION_USU_UNINSTALL', '卸载Ultimate URL');  
+  
+// 在配置页面上使用的消息  
+define('USU_PLUGIN_WARNING_SHORT_WORDS', '为<em>过滤短单词</em>设置输入的值(<b>%s</b>)不是正整数；该设置已默认设置为<b>0</b>。');  
+define('USU_PLUGIN_WARNING_CATEGORY_DIR', '<em>将分类显示为目录</em>的设置已更改为<code</code>设置不兼容。>设置不兼容。');  
+  
+define('USU_INSTALLED_SUCCESS', BOX_CONFIGURATION_USU . '，v%s，已成功安装。');  
+define('USU_UPDATED_SUCCESS', BOX_CONFIGURATION_USU . '已成功从v%1$s更新到v%2$s。');

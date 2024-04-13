@@ -7,7 +7,7 @@
 */
 
 $define = [
-    'BOX_REPORTS_SALES_REPORT_GRAPHS' => 'Sales Report with Graphs',
+    'BOX_REPORTS_SALES_REPORT_GRAPHS' => '带有图表的销售报告',
 ];
 
 return $define;

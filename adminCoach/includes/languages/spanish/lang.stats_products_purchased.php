@@ -7,13 +7,13 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Best Products Purchased',
-    'TABLE_HEADING_PURCHASED' => 'Purchased',
-    'TABLE_HEADING_CUSTOMERS_ID' => 'Customer<br>ID#',
-    'TABLE_HEADING_ORDERS_ID' => 'Order<br>ID#',
-    'TABLE_HEADING_ORDERS_DATE_PURCHASED' => 'Date',
-    'TABLE_HEADING_CUSTOMERS_INFO' => 'Customer',
-    'TABLE_HEADING_PRODUCTS_QUANTITY' => 'QTY',
+    'HEADING_TITLE' => '最佳购买产品',  
+    'TABLE_HEADING_PURCHASED' => '已购买',  
+    'TABLE_HEADING_CUSTOMERS_ID' => '客户<br>ID号',  
+    'TABLE_HEADING_ORDERS_ID' => '订单<br>ID号',  
+    'TABLE_HEADING_ORDERS_DATE_PURCHASED' => '日期',  
+    'TABLE_HEADING_CUSTOMERS_INFO' => '客户',  
+    'TABLE_HEADING_PRODUCTS_QUANTITY' => '数量',
 ];
 
 return $define;

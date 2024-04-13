@@ -7,18 +7,18 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Tax Classes',
-    'TABLE_HEADING_TAX_CLASS_ID' => 'ID',
-    'TABLE_HEADING_TAX_CLASSES' => 'Tax Classes',
-    'TEXT_INFO_CLASS_TITLE' => 'Tax Class Title:',
-    'TEXT_INFO_CLASS_DESCRIPTION' => 'Description:',
-    'TEXT_INFO_INSERT_INTRO' => 'Please enter the new tax class with its related data',
-    'TEXT_INFO_DELETE_INTRO' => 'Are you sure you want to delete this tax class?',
-    'TEXT_INFO_HEADING_NEW_TAX_CLASS' => 'New Tax Class',
-    'TEXT_INFO_HEADING_EDIT_TAX_CLASS' => 'Edit Tax Class',
-    'TEXT_INFO_HEADING_DELETE_TAX_CLASS' => 'Delete Tax Class',
-    'ERROR_TAX_RATE_EXISTS_FOR_CLASS' => 'ERROR: Cannot delete this Tax Class -- Tax Rates are currently linked to this Tax Class.',
-    'ERROR_TAX_RATE_EXISTS_FOR_PRODUCTS' => 'ERROR: Cannot delete this Tax Class -- There are %s products linked to this Tax Class.',
+    'HEADING_TITLE' => '税率类别',  
+    'TABLE_HEADING_TAX_CLASS_ID' => 'ID',  
+    'TABLE_HEADING_TAX_CLASSES' => '税率类别',  
+    'TEXT_INFO_CLASS_TITLE' => '税率类别标题：',  
+    'TEXT_INFO_CLASS_DESCRIPTION' => '描述：',  
+    'TEXT_INFO_INSERT_INTRO' => '请输入新的税率类别及其相关数据',  
+    'TEXT_INFO_DELETE_INTRO' => '您确定要删除这个税率类别吗？',  
+    'TEXT_INFO_HEADING_NEW_TAX_CLASS' => '新建税率类别',  
+    'TEXT_INFO_HEADING_EDIT_TAX_CLASS' => '编辑税率类别',  
+    'TEXT_INFO_HEADING_DELETE_TAX_CLASS' => '删除税率类别',  
+    'ERROR_TAX_RATE_EXISTS_FOR_CLASS' => '错误：无法删除这个税率类别——当前有税率与这个税率类别关联。',  
+    'ERROR_TAX_RATE_EXISTS_FOR_PRODUCTS' => '错误：无法删除这个税率类别——有 %s 个商品与这个税率类别关联。',
 ];
 
 return $define;

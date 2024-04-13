@@ -7,17 +7,17 @@
 */
 
 $define = [
-    'TEXT_COUNT_CUSTOMERS' => 'Customers receiving this Product Notification: %s',
-    'TEXT_NOTIFICATION_INFO_GLOBAL' => '<p><b>%%BUTTON_GLOBAL%%</b> button: the notification %s will be programmed to be sent to customers who chose to receive <strong>global</strong> product notifications.</p>',
-    'TEXT_NOTIFICATION_INFO_PRODUCTS' => '<p>Optionally, by selecting products and <b>%%BUTTON_SUBMIT%%</b>, the notification will <b>also</b> be sent to customers who chose to receive specific product notifications.</p>',
-    'TEXT_PRODUCTS' => 'Products',
-    'TEXT_SELECTED_PRODUCTS' => 'Selected Products',
-    'JS_PLEASE_SELECT_PRODUCTS' => 'Please select some products.',
-    'BUTTON_GLOBAL' => 'Global',
-    'BUTTON_SELECT' => '>>>',
-    'BUTTON_UNSELECT' => '<<<',
-    'BUTTON_SUBMIT' => 'Submit',
-    'BUTTON_CANCEL' => 'Cancel',
+    'TEXT_COUNT_CUSTOMERS' => '接收此产品通知的顾客数：%s',  
+    'TEXT_NOTIFICATION_INFO_GLOBAL' => '<p><b>%%BUTTON_GLOBAL%%</b> 按钮：通知 %s 将被设置为发送给选择接收<strong>全局</strong>产品通知的顾客。</p>',  
+    'TEXT_NOTIFICATION_INFO_PRODUCTS' => '<p>可选地，通过选择产品和<b>%%BUTTON_SUBMIT%%</b>，该通知<b>也会</b>发送给选择接收特定产品通知的顾客。</p>',  
+    'TEXT_PRODUCTS' => '产品',  
+    'TEXT_SELECTED_PRODUCTS' => '已选择的产品',  
+    'JS_PLEASE_SELECT_PRODUCTS' => '请选择一些产品。',  
+    'BUTTON_GLOBAL' => '全局',  
+    'BUTTON_SELECT' => '>>>',  
+    'BUTTON_UNSELECT' => '<<<',  
+    'BUTTON_SUBMIT' => '提交',  
+    'BUTTON_CANCEL' => '取消',
 ];
 
 return $define;

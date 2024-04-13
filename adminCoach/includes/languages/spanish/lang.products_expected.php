@@ -7,9 +7,9 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Upcoming Products',
-    'TABLE_HEADING_DATE_EXPECTED' => 'Date Expected',
-    'TEXT_INFO_DATE_EXPECTED' => 'Date Expected:',
+    'HEADING_TITLE' => '即将上市的产品',  
+    'TABLE_HEADING_DATE_EXPECTED' => '预计上市日期',  
+    'TEXT_INFO_DATE_EXPECTED' => '预计上市日期：',
 ];
 
 return $define;

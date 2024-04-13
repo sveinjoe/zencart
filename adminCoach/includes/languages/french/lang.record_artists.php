@@ -7,21 +7,21 @@
 */
 
 $define = [
-    'HEADING_TITLE' => 'Recording Artists',
-    'TABLE_HEADING_RECORD_ARTISTS' => 'Record Artists',
-    'TEXT_NEW_INTRO' => 'Please enter the details of the new recording artist below.',
-    'TEXT_EDIT_INTRO' => 'Please amend the details of the recording artist below.',
-    'TEXT_DELETE_INTRO' => 'Are you sure you want to delete this artist.',
-    'TEXT_RECORD_ARTIST_NAME' => 'Artists Name',
-    'TEXT_RECORD_ARTIST_IMAGE' => 'Artists Image',
-    'TEXT_RECORD_ARTIST_URL' => 'Artists Web Site',
-    'TEXT_ARTISTS_IMAGE_DIR' => 'Image Directory&nbsp;',
-    'TEXT_HEADING_NEW_RECORD_ARTIST' => 'New Recording Artist',
-    'TEXT_HEADING_EDIT_RECORD_ARTIST' => 'Edit Recording Artist',
-    'TEXT_HEADING_DELETE_RECORD_ARTIST' => 'Delete Recording Artist',
-    'TEXT_DISPLAY_NUMBER_OF_ARTISTS' => 'Displaying <strong>%d</strong> to <strong>%d</strong> (of <strong>%d</strong> Recording Artists)',
-    'TEXT_DELETE_PRODUCTS' => 'Delete this Recording Artist and all items linked to it?',
-    'TEXT_DELETE_WARNING_PRODUCTS' => '<b>WARNING:</b> There are %s items still linked to this Recording Artist!',
+    'HEADING_TITLE' => '录音艺术家',  
+    'TABLE_HEADING_RECORD_ARTISTS' => '录音艺术家',  
+    'TEXT_NEW_INTRO' => '请在下方输入新录音艺术家的详细信息。',  
+    'TEXT_EDIT_INTRO' => '请在下方修改录音艺术家的详细信息。',  
+    'TEXT_DELETE_INTRO' => '您确定要删除这位艺术家吗？',  
+    'TEXT_RECORD_ARTIST_NAME' => '艺术家姓名',  
+    'TEXT_RECORD_ARTIST_IMAGE' => '艺术家图片',  
+    'TEXT_RECORD_ARTIST_URL' => '艺术家网站',  
+    'TEXT_ARTISTS_IMAGE_DIR' => '图片目录&nbsp;',  
+    'TEXT_HEADING_NEW_RECORD_ARTIST' => '新建录音艺术家',  
+    'TEXT_HEADING_EDIT_RECORD_ARTIST' => '编辑录音艺术家',  
+    'TEXT_HEADING_DELETE_RECORD_ARTIST' => '删除录音艺术家',  
+    'TEXT_DISPLAY_NUMBER_OF_ARTISTS' => '显示 <strong>%d</strong> 到 <strong>%d</strong> （共 <strong>%d</strong> 位录音艺术家）',  
+    'TEXT_DELETE_PRODUCTS' => '删除这位录音艺术家及其所有关联商品？',  
+    'TEXT_DELETE_WARNING_PRODUCTS' => '<b>警告：</b> 还有 %s 个商品与这位录音艺术家关联！',
 ];
 
 return $define;

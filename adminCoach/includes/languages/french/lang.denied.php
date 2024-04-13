@@ -7,9 +7,9 @@
 */
 
 $define = [
-    'TEXT_ACCESS_DENIED' => 'Sorry, your security clearance does not allow you to access this resource.',
-    'TEXT_CONTACT_SITE_ADMIN' => 'Please contact your site administrator if you believe this to be incorrect.',
-    'TEXT_APOLOGY' => 'Sorry for any inconvenience.',
+    'TEXT_ACCESS_DENIED' => '对不起，您的安全权限不允许您访问此资源。',  
+    'TEXT_CONTACT_SITE_ADMIN' => '如果您认为这不正确，请联系您的网站管理员。',  
+    'TEXT_APOLOGY' => '对于给您带来的任何不便，我们深表歉意。',
 ];
 
 return $define;
