@@ -1,0 +1,33 @@
+<?php
+$define = [
+    'EMAIL_LOGO_ALT_TITLE_TEXT' => 'Zen Cart! La Maestria dell\'E-commerce',  
+    'EMAIL_LOGO_FILENAME' => 'header.jpg',  
+    'EMAIL_LOGO_WIDTH' => '550',  
+    'EMAIL_LOGO_HEIGHT' => '110',  
+    'EMAIL_EXTRA_HEADER_INFO' => '',  
+    'OFFICE_FROM' => '<strong>Da:</strong>',  
+    'OFFICE_EMAIL' => '<strong>Email:</strong>',  
+    'OFFICE_USE' => '<strong>Solo Uso Ufficiale:</strong>',  
+    'OFFICE_LOGIN_NAME' => '<strong>Nome Login:</strong>',  
+    'OFFICE_LOGIN_EMAIL' => '<strong>Email Login:</strong>',  
+    'OFFICE_LOGIN_PHONE' => '<strong>Telefono:</strong>',  
+    'OFFICE_LOGIN_FAX' => '<strong>Fax:</strong>',  
+    'OFFICE_IP_ADDRESS' => '<strong>Indirizzo IP:</strong>',  
+    'OFFICE_HOST_ADDRESS' => '<strong>Indirizzo Host:</strong>',  
+    'OFFICE_DATE_TIME' => '<strong>Data e Ora:</strong>',  
+    'EMAIL_TEXT_TELEPHONE' => 'Telefono: ',  
+    'EMAIL_DISCLAIMER' => 'Questo indirizzo email è stato fornito a noi da voi o da uno dei nostri clienti. Se pensate di aver ricevuto questa email per errore, vi preghiamo di inviare un email a %s ',  
+    'EMAIL_SPAM_DISCLAIMER' => '',  
+    'EMAIL_ORDER_MESSAGE' => '',  
+    'EMAIL_FOOTER_COPYRIGHT' => 'Copyright (c) ' . date('Y') . ' <a href="' . zen_href_link(FILENAME_DEFAULT) . '">' . STORE_NAME . '</a>. Fornito da <a href="https://www.zen-cart.com">Zen Cart</a>',  
+    'TEXT_UNSUBSCRIBE' => "\n\nPer annullare la sottoscrizione alle future newsletter e messaggi promozionali, è sufficiente cliccare sul seguente link: \n",  
+    'EMAIL_ADVISORY' => '-----' . "\n" . '<strong>IMPORTANTE:</strong> Per vostra protezione e per prevenire un uso malintenzionato, tutte le email inviate tramite questo sito web sono registrate e il loro contenuto è conservato e disponibile per il proprietario del negozio. Se pensate di aver ricevuto questa email per errore, vi preghiamo di inviare un email a ' . STORE_OWNER_EMAIL_ADDRESS . "\n\n",  
+    'EMAIL_ADVISORY_INCLUDED_WARNING' => '<strong>Questo messaggio è incluso in tutte le email inviate da questo sito:</strong>',
+    'SEND_EXTRA_CREATE_ACCOUNT_EMAILS_TO_SUBJECT' => '[CREATE ACCOUNT]',
+    'SEND_EXTRA_GV_CUSTOMER_EMAILS_TO_SUBJECT' => '[GV CUSTOMER SENT]',
+    'SEND_EXTRA_NEW_ORDERS_EMAILS_TO_SUBJECT' => '[NEW ORDER]',
+    'EMAIL_TEXT_SUBJECT_LOWSTOCK' => 'Avviso: Scorte basse',  
+    'SEND_EXTRA_LOW_STOCK_EMAIL_TITLE' => 'Rapporto sulle scorte basse: ',
+];
+
+return $define;

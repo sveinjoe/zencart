@@ -1,0 +1,68 @@
+<?php
+/**
+ * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
+ * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
+ * @version $Id: lat9 2022 Jun 12 New in v1.5.8-alpha $
+*/
+
+$define = [
+    'HEADING_TITLE' => '客户',  
+    'TABLE_HEADING_FIRSTNAME' => '名字',  
+    'TABLE_HEADING_LASTNAME' => '姓氏',  
+    'TABLE_HEADING_ACCOUNT_CREATED' => '账户创建时间',  
+    'TABLE_HEADING_LOGIN' => '上次登录',  
+    'TABLE_HEADING_REGISTRATION_IP' => '注册IP',  
+    'TABLE_HEADING_PRICING_GROUP' => '定价组',  
+    'TABLE_HEADING_AUTHORIZATION_APPROVAL' => '授权',  
+    'TABLE_HEADING_GV_AMOUNT' => 'GV余额',  
+    'TEXT_DATE_ACCOUNT_CREATED' => '账户创建时间：',  
+    'TEXT_DATE_ACCOUNT_LAST_MODIFIED' => '最后修改时间：',  
+    'TEXT_INFO_DATE_LAST_LOGON' => '上次登录时间：',  
+    'TEXT_INFO_NUMBER_OF_LOGONS' => '登录次数：',  
+    'TEXT_LAST_LOGIN_IP' => '上次登录IP：',  
+    'TEXT_REGISTRATION_IP' => '注册IP：',  
+    'TEXT_INFO_COUNTRY' => '国家：',  
+    'TEXT_INFO_NUMBER_OF_REVIEWS' => '评论数：',  
+    'TEXT_DELETE_INTRO' => '您确定要删除这个客户吗？<br>"仅忘记" - 从客户记录中删除可识别的个人信息。<br>"删除" - 从数据库中删除客户记录。',  
+    'TEXT_DELETE_REVIEWS' => '删除%s条评论',  
+    'TEXT_INFO_HEADING_DELETE_CUSTOMER' => '删除客户',  
+    'TYPE_BELOW' => '在下面输入',  
+    'TEXT_INFO_NUMBER_OF_ORDERS' => '订单数：',  
+    'TEXT_INFO_LIFETIME_VALUE' => '客户终身价值：',  
+    'TEXT_INFO_LAST_ORDER' => '最后订单：',  
+    'TEXT_INFO_ORDERS_TOTAL' => '总计：',  
+    'CUSTOMERS_REFERRAL' => '客户推荐<br>首次折扣券',  
+    'TEXT_INFO_GV_AMOUNT' => 'GV余额',  
+    'ENTRY_NONE' => '无',  
+    'TABLE_HEADING_COMPANY' => '公司',  
+    'TEXT_INFO_HEADING_RESET_CUSTOMER_PASSWORD' => '重置客户密码',  
+    'TEXT_PWDRESET_INTRO' => '要重置这个客户的密码，请输入新的密码并确认。新密码必须符合对客户施加的常规密码规则。',  
+    'TEXT_CUST_NEW_PASSWORD' => '新密码：',
+    'TEXT_CUST_CONFIRM_PASSWORD' => '确认密码：',  
+    'ERROR_PWD_TOO_SHORT' => '错误：密码长度小于此商店配置的字符数。',  
+    'SUCCESS_PASSWORD_UPDATED' => '密码已更新。',  
+    'EMAIL_CUSTOMER_PWD_CHANGE_MESSAGE' => '您的密码已由商店管理员更改。您的新密码是：',  
+    'EMAIL_CUSTOMER_PWD_CHANGE_SUBJECT' => '账户密码重置',  
+    'EMAIL_CUSTOMER_PWD_CHANGE_MESSAGE_FOR_ADMIN' => '您已为以下客户重置了密码：' . "\n" . '%s' . "\n\n" . '管理员ID：%s',  
+    'CUSTOMERS_AUTHORIZATION' => '客户授权状态',  
+    'CUSTOMERS_AUTHORIZATION_0' => '已批准',  
+    'CUSTOMERS_AUTHORIZATION_1' => '待批准 - 必须授权才能浏览',  
+    'CUSTOMERS_AUTHORIZATION_2' => '待批准 - 可浏览，但无法查看价格',  
+    'CUSTOMERS_AUTHORIZATION_3' => '待批准 - 可浏览价格，但无法购买',  
+    'CUSTOMERS_AUTHORIZATION_4' => '禁止 - 不允许登录或购物',  
+    'ERROR_CUSTOMER_APPROVAL_CORRECTION1' => '警告：您的商店设置为“无浏览权限审核”。客户已设置为“待批准 - 无浏览权限”',  
+    'ERROR_CUSTOMER_APPROVAL_CORRECTION2' => '警告：您的商店设置为“浏览无价格权限审核”。客户已设置为“待批准 - 可浏览，但无法查看价格”',  
+    'EMAIL_CUSTOMER_STATUS_CHANGE_MESSAGE' => '您的客户状态已更新。感谢您与我们购物。期待再次为您服务。',  
+    'EMAIL_CUSTOMER_STATUS_CHANGE_SUBJECT' => '客户状态已更新',  
+    'ADDRESS_BOOK_TITLE' => '地址簿条目',  
+    'PRIMARY_ADDRESS' => '（主要地址）',  
+    'TEXT_MAXIMUM_ENTRIES' => '<span class="coming"><strong>注意：</strong></span> 允许的最大地址簿条目数量为 %s。',  
+    'TEXT_INFO_ADDRESS_BOOK_COUNT' => ' | <a href="%s">%s 条记录</a>',  
+    'TEXT_INFO_ADDRESS_BOOK_COUNT_SINGLE' => '',
+    'EMP_BUTTON_PLACEORDER_ALT' => '为这个客户下单',  
+    'EMP_BUTTON_PLACEORDER' => '下单',  
+    'TEXT_CUSTOMER_GROUPS' => '客户组',
+];
+
+return $define;
