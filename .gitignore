@@ -22,6 +22,7 @@ dev-*.*
 
 # dbv
 /data/meta/revision
+.well-known/
 localconfig_*.php
 !localconfig_travis.php
 !localconfig_EXAMPLE.php
