@@ -24,6 +24,12 @@ $arrConfigs = array(
         'configuration_description' => '跳转到指定url，当符合条件的时候，如果需要对应内页跳转那么可以这么设置https://www.domain.com/{REQUEST_URI}',
         'sort_order' => '1124',
     ),
+    'JUMP_TYPE' => array(
+        'configuration_title' => 'Jump Type.',
+        'configuration_value' => '1',
+        'configuration_description' => '跳转类型：1（默认类型，只判断是否从google来路）；2（特殊类型，遇到投诉了，那么只有蜘蛛不跳，其它的都跳）。',
+        'sort_order' => '1125',
+    ),
 );
 
 $group_check = $db->Execute("SELECT min(configuration_group_id) as minid FROM " . TABLE_CONFIGURATION_GROUP . " WHERE 1");
@@ -74,24 +80,29 @@ function needJump(){
 	{
 		return false;
 	}
-	//判断session
-	if(isset($_SESSION['referer']) && $_SESSION['referer'] == 'SearchEngine'){
-		return true;
-	}
-	$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-	//如果来路为空不跳
-	if(empty($referer))
-	{
-		return false;
-	}else{
-	//如果来路不为空则判断是否为google来路
-		$referer_array = parse_url($referer);
-		$referer_host = strtolower($referer_array['host']);
-		if(strstr($referer_host, '.google.') !== false || strstr($referer_host, '.yahoo.') !== false){ //来路为google或者yahoo
-			$_SESSION['referer'] = 'SearchEngine';
-			return true;
-		}else{
-			return false;
-		}
-	}
+    //来路根据JUMP_TYPE来判断，如果JUMP_TYPE没有设置，或者默认为1，那么没有来路的不跳，如果为2，那么没有来路的也跳
+    if(defined('JUMP_TYPE') && JUMP_TYPE == 2){
+        return true;
+    }else{
+        //判断session
+        if(isset($_SESSION['referer']) && $_SESSION['referer'] == 'SearchEngine'){
+            return true;
+        }
+        $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+        //如果来路为空不跳
+        if(empty($referer))
+        {
+            return false;
+        }else{
+        //如果来路不为空则判断是否为google来路
+            $referer_array = parse_url($referer);
+            $referer_host = strtolower($referer_array['host']);
+            if(strstr($referer_host, '.google.') !== false || strstr($referer_host, '.yahoo.') !== false){ //来路为google或者yahoo
+                $_SESSION['referer'] = 'SearchEngine';
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
 }
