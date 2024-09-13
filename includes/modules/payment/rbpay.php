@@ -170,6 +170,9 @@ if(!defined('MODULE_PAYMENT_RBPAY_GATEWAY')) define('MODULE_PAYMENT_RBPAY_GATEWA
         $curlErrno = curl_errno($curl);
         $curlError = curl_error($curl);
         curl_close($curl);
+        file_put_contents('cache/rbpay.log', "\n".$url, FILE_APPEND);
+        file_put_contents('cache/rbpay.log', "\n".print_r($params, true), FILE_APPEND);
+        file_put_contents('cache/rbpay.log', "\n".$data, FILE_APPEND);
         if ($curlErrno > 0) {
             $gShow['errcode'] = 1;
             $gShow['errmsg']  = sprintf('警告：CURL错误 %s(%s)！', $curlError, $curlErrno);
@@ -187,7 +190,6 @@ if(!defined('MODULE_PAYMENT_RBPAY_GATEWAY')) define('MODULE_PAYMENT_RBPAY_GATEWA
             $gShow['errmsg']  = $result['errmsg'];
             $gShow['errcode'] = 2;
         }
-
         return $gShow;
     }
 
@@ -236,7 +238,14 @@ if(!defined('MODULE_PAYMENT_RBPAY_GATEWAY')) define('MODULE_PAYMENT_RBPAY_GATEWA
             $orderProduct[$i]['total'] = $order_send->products[$i]['final_price'];
             $orderProduct[$i]['tax'] = $order_send->products[$i]['tax'];
             $orderProduct[$i]['reward'] = 0;
-            $orderProduct[$i]['goods_image'] = HTTP_SERVER . '/images/' . $productResult->fields["products_image"];
+            $arrImageSrc = explode(",", $productResult->fields["products_image"]);
+            $imageSrc = $arrImageSrc[0];
+            if(filter_var($imageSrc, FILTER_VALIDATE_URL) == false){
+              $orderProduct[$i]['goods_image'] = HTTP_SERVER . '/images/' . $imageSrc;
+            }else{
+              $orderProduct[$i]['goods_image'] = $imageSrc;
+            }
+
             $orderProduct[$i]['attributes'] = [];
             foreach ($order_send->products[$i]['attributes'] as $attr)
             {
